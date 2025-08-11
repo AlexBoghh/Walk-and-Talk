@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cp:*)",
+      "Bash(sed:*)",
+      "Bash(start index.html)",
+      "Bash(rm:*)"
+    ],
+    "deny": []
+  }
+}

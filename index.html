@@ -1,0 +1,3718 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Walk & Talk - Mental Health Walk | Aug 12, Bukit Kiara</title>
+    <meta name="description" content="Join our healing community walk for Mental Health Awareness Week. Communication and wellness at Bukit Kiara. Register now - all ages welcome.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Simple Leaf Animation -->
+    <link rel="stylesheet" href="simple-leaves.css">
+    
+    <style>
+        :root {
+            /* Modern Green Nature Palette */
+            --primary-green: #2D5F3F;
+            --sage-green: #87A96B;
+            --mint-green: #98FF98;
+            --forest-dark: #1B3B2F;
+            --leaf-light: #E8F5E8;
+            
+            /* Supporting Colors */
+            --cream: #FFF8F3;
+            --white: #FFFFFF;
+            --text-dark: #1A1A1A;
+            --text-gray: #6B7280;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            overflow-x: hidden;
+            width: 100%;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+            width: 100%;
+            max-width: 100vw;
+        }
+        
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 0;
+            transition: all 0.3s ease;
+        }
+        
+        .navbar.scrolled {
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-green);
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary-green);
+        }
+        
+        .nav-cta {
+            background: var(--primary-green);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .nav-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(45, 95, 63, 0.3);
+        }
+        
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, #E8F5E8 0%, #FFF8F3 50%, #FFFFFF 100%);
+            padding-top: 80px;
+        }
+        
+        /* Background Pattern */
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(135, 169, 107, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(45, 95, 63, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 40% 60%, rgba(152, 255, 152, 0.08) 0%, transparent 50%);
+            z-index: 0;
+        }
+        
+        /* Leaf animations are now in simple-leaves.css for smooth, gentle falling */
+        
+        /* Hero Section */
+        
+        /* Hero Content */
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            position: relative;
+            z-index: 2;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        
+        .hero-content {
+            animation: fadeInUp 1s ease-out;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .hero-badge {
+            display: inline-block;
+            background: var(--leaf-light);
+            color: var(--primary-green);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+        
+        h1 {
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            line-height: 1.1;
+            color: var(--forest-dark);
+            margin-bottom: 1.5rem;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, var(--primary-green), var(--sage-green));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hero-description {
+            font-size: 1.25rem;
+            color: var(--text-gray);
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+        
+        .btn-primary {
+            background: var(--primary-green);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.125rem;
+            transition: all 0.3s ease;
+            display: inline-block;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 20px 40px rgba(45, 95, 63, 0.3);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: var(--primary-green);
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.125rem;
+            transition: all 0.3s ease;
+            display: inline-block;
+            border: 2px solid var(--primary-green);
+            cursor: pointer;
+        }
+        
+        .btn-secondary:hover {
+            background: var(--primary-green);
+            color: white;
+            transform: translateY(-3px);
+        }
+        
+        /* Hero Stats */
+        .hero-stats {
+            display: flex;
+            gap: 3rem;
+        }
+        
+        .stat {
+            text-align: left;
+        }
+        
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-green);
+            display: block;
+        }
+        
+        .stat-label {
+            font-size: 0.875rem;
+            color: var(--text-gray);
+        }
+        
+        /* Hero Visual */
+        .hero-visual {
+            position: relative;
+            animation: fadeInUp 1s ease-out 0.3s both;
+        }
+        
+        .nature-illustration {
+            width: 100%;
+            height: auto;
+            position: relative;
+            z-index: 1;
+        }
+        
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        /* Spacing System - 8px Grid */
+        :root {
+            --space-unit: 8px;
+            --space-xs: 8px;
+            --space-sm: 16px;
+            --space-md: 24px;
+            --space-lg: 32px;
+            --space-xl: 48px;
+            --space-2xl: 64px;
+        }
+        
+        /* Section Base */
+        section {
+            padding: var(--space-xl) 0;
+            overflow-x: hidden;
+        }
+        
+        /* Adjacent section spacing */
+        section + section {
+            padding-top: var(--space-lg);
+        }
+        
+        /* Typography */
+        h2 {
+            font-size: 2.5rem;
+            color: var(--forest-dark);
+            margin: 0 0 var(--space-md) 0;
+            text-align: center;
+        }
+        
+        h3 {
+            margin: 0 0 var(--space-sm) 0;
+        }
+        
+        p {
+            margin: 0 0 var(--space-sm) 0;
+        }
+        
+        p:last-child {
+            margin-bottom: 0;
+        }
+        
+        /* Event Details Section - Community Focused */
+        .event-details {
+            background: linear-gradient(180deg, #FFFFFF 0%, #FFF8F3 50%, #F0FFF4 100%);
+            /* Inherits section padding */
+            position: relative;
+            overflow: hidden;
+            overflow-x: hidden;
+        }
+        
+        .event-details::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(152, 255, 152, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+            overflow: hidden;
+        }
+        
+        /* Friendly Header */
+        .event-header {
+            text-align: center;
+            margin-bottom: var(--space-lg);
+            position: relative;
+        }
+        
+        .event-emoji {
+            font-size: 3rem;
+            display: block;
+            margin-bottom: 16px;
+        }
+        
+        .header-label {
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: var(--sage-green);
+            background: var(--leaf-light);
+            padding: 6px 16px;
+            border-radius: 20px;
+            display: inline-block;
+            margin-bottom: 16px;
+        }
+        
+        .header-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--forest-dark);
+            margin-bottom: 12px;
+            line-height: 1.3;
+        }
+        
+        .header-date {
+            display: block;
+            font-size: 1.5rem;
+            color: var(--primary-green);
+            font-weight: 500;
+            margin-top: 8px;
+        }
+        
+        .header-description {
+            font-size: 1.25rem;
+            color: var(--text-gray);
+            margin: 0;
+            font-weight: 400;
+        }
+        
+        /* Main Event Cards */
+        .event-main-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-bottom: 60px;
+        }
+        
+        .event-card {
+            background: white;
+            border-radius: 20px;
+            padding: 28px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        
+        .event-card:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 12px 40px rgba(45, 95, 63, 0.12);
+            border-color: var(--mint-green);
+        }
+        
+        .card-emoji {
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+            display: block;
+        }
+        
+        .event-card h3 {
+            font-size: 1.25rem;
+            color: var(--forest-dark);
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+        
+        .card-pattern {
+            position: absolute;
+            bottom: -20px;
+            right: -20px;
+            width: 100px;
+            height: 100px;
+            background: radial-gradient(circle, var(--leaf-light) 20%, transparent 20%);
+            background-size: 15px 15px;
+            opacity: 0.5;
+            transform: rotate(45deg);
+        }
+        
+        /* When Card */
+        .time-display {
+            margin: 16px 0;
+        }
+        
+        .time-big {
+            display: block;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-green);
+            margin-bottom: 4px;
+        }
+        
+        .time-duration {
+            font-size: 0.95rem;
+            color: var(--sage-green);
+            font-weight: 500;
+        }
+        
+        .card-note {
+            font-size: 0.875rem;
+            color: var(--text-gray);
+            margin-top: 8px;
+            font-style: italic;
+        }
+        
+        /* Where Card */
+        .location-desc {
+            color: var(--text-gray);
+            margin-bottom: 16px;
+            font-size: 0.95rem;
+        }
+        
+        .map-btn {
+            background: var(--leaf-light);
+            color: var(--primary-green);
+            border: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        
+        .map-btn:hover {
+            background: var(--primary-green);
+            color: white;
+            transform: scale(1.05);
+        }
+        
+        /* Who Card */
+        .welcome-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin: 16px 0;
+        }
+        
+        .tag {
+            background: linear-gradient(135deg, #E8F5E8, #F0FFF4);
+            color: var(--primary-green);
+            padding: 6px 12px;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+        
+        /* Journey Timeline */
+        .journey-section {
+            margin-bottom: 40px;
+        }
+        
+        .journey-title {
+            font-size: 1.75rem;
+            color: var(--forest-dark);
+            margin-bottom: 32px;
+            text-align: center;
+            font-weight: 600;
+        }
+        
+        .journey-timeline {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+            position: relative;
+        }
+        
+        .journey-timeline::before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            left: 5%;
+            right: 5%;
+            height: 2px;
+            background: linear-gradient(90deg, var(--sage-green), var(--mint-green));
+            z-index: 0;
+        }
+        
+        .timeline-item {
+            position: relative;
+            text-align: center;
+        }
+        
+        .timeline-dot {
+            width: 40px;
+            height: 40px;
+            background: white;
+            border: 3px solid var(--sage-green);
+            border-radius: 50%;
+            margin: 0 auto 16px;
+            position: relative;
+            z-index: 1;
+            transition: all 0.3s ease;
+        }
+        
+        .timeline-item:hover .timeline-dot {
+            background: var(--sage-green);
+            transform: scale(1.2);
+        }
+        
+        .timeline-content {
+            background: white;
+            padding: 16px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+        
+        .timeline-time {
+            display: block;
+            font-size: 0.75rem;
+            color: var(--primary-green);
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+        
+        .timeline-content h4 {
+            font-size: 1rem;
+            color: var(--forest-dark);
+            margin: 0 0 4px 0;
+            font-weight: 600;
+        }
+        
+        .timeline-content p {
+            font-size: 0.85rem;
+            color: var(--text-gray);
+            margin: 0;
+        }
+        
+        /* Community Features */
+        .community-features {
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+            margin-bottom: 48px;
+            flex-wrap: wrap;
+        }
+        
+        .feature {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 20px;
+            background: white;
+            border-radius: 30px;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .feature:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 20px rgba(45, 95, 63, 0.15);
+        }
+        
+        .feature-icon {
+            font-size: 1.5rem;
+        }
+        
+        .feature-text {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--forest-dark);
+        }
+        
+        /* Conversation Topics Section */
+        .conversation-topics {
+            background: linear-gradient(135deg, #F0FFF4 0%, #E8F5E8 50%, #FFFFFF 100%);
+            border-radius: 24px;
+            padding: 48px;
+            margin-top: 40px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .conversation-topics::before {
+            content: '';
+            position: absolute;
+            top: -100px;
+            right: -100px;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(152, 255, 152, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+        
+        .topics-header {
+            text-align: center;
+            margin-bottom: 48px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .topics-badge {
+            display: inline-block;
+            background: var(--leaf-light);
+            color: var(--primary-green);
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+        
+        .topics-header h3 {
+            font-size: 2rem;
+            color: var(--forest-dark);
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+        
+        .topics-header p {
+            font-size: 1.125rem;
+            color: var(--text-gray);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .topics-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+            margin-bottom: 40px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .topic-column {
+            background: white;
+            border-radius: 16px;
+            padding: 24px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+            transition: all 0.3s ease;
+        }
+        
+        .topic-column:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(45, 95, 63, 0.12);
+        }
+        
+        .column-header {
+            text-align: center;
+            margin-bottom: 24px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid var(--leaf-light);
+        }
+        
+        .column-emoji {
+            font-size: 2rem;
+            display: block;
+            margin-bottom: 12px;
+        }
+        
+        .column-header h4 {
+            font-size: 1.25rem;
+            color: var(--forest-dark);
+            margin-bottom: 4px;
+            font-weight: 600;
+        }
+        
+        .column-header p {
+            font-size: 0.875rem;
+            color: var(--text-gray);
+            margin: 0;
+        }
+        
+        .topic-cards {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        
+        .topic-card {
+            display: flex;
+            gap: 12px;
+            padding: 12px;
+            background: linear-gradient(135deg, #FAFBFC 0%, #F8FFF9 100%);
+            border-radius: 12px;
+            transition: all 0.2s ease;
+            cursor: pointer;
+        }
+        
+        .topic-card:hover {
+            background: linear-gradient(135deg, var(--leaf-light) 0%, #E8FFF0 100%);
+            transform: translateX(4px);
+        }
+        
+        .topic-icon {
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+        
+        .topic-content h5 {
+            font-size: 1rem;
+            color: var(--forest-dark);
+            margin-bottom: 4px;
+            font-weight: 600;
+        }
+        
+        .topic-content p {
+            font-size: 0.875rem;
+            color: var(--text-gray);
+            margin: 0;
+            line-height: 1.4;
+        }
+        
+        /* Different column accents */
+        .light-topics {
+            border-top: 4px solid var(--mint-green);
+        }
+        
+        .meaningful-topics {
+            border-top: 4px solid var(--sage-green);
+        }
+        
+        .activity-topics {
+            border-top: 4px solid var(--primary-green);
+        }
+        
+        /* Conversation Tips */
+        .conversation-tips {
+            background: white;
+            padding: 32px;
+            border-radius: 16px;
+            margin-bottom: 32px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+        
+        .conversation-tips h4 {
+            font-size: 1.25rem;
+            color: var(--forest-dark);
+            margin-bottom: 20px;
+            text-align: center;
+            font-weight: 600;
+        }
+        
+        .tips-list {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        .tip {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            background: var(--leaf-light);
+            border-radius: 25px;
+            transition: all 0.2s ease;
+        }
+        
+        .tip:hover {
+            background: var(--primary-green);
+            color: white;
+            transform: scale(1.05);
+        }
+        
+        .tip-icon {
+            font-size: 1.25rem;
+        }
+        
+        .tip span:last-child {
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: inherit;
+        }
+        
+        /* Topics CTA */
+        .topics-cta {
+            text-align: center;
+            padding-top: 20px;
+        }
+        
+        .topics-cta p {
+            font-size: 1.125rem;
+            color: var(--text-gray);
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+        
+        .join-btn {
+            background: var(--primary-green);
+            color: white;
+            padding: 16px 40px;
+            border: none;
+            border-radius: 30px;
+            font-size: 1.125rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .join-btn:hover {
+            background: var(--forest-dark);
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(45, 95, 63, 0.3);
+        }
+        
+        .join-btn::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+        
+        .join-btn:active::after {
+            width: 300px;
+            height: 300px;
+        }
+        
+        /* Walk & Talk Info Section - Minimalist Style */
+        .walkinfo {
+            background: linear-gradient(180deg, #FFFFFF 0%, #F0FFF4 100%);
+            /* Inherits section padding */
+            position: relative;
+        }
+        
+        .walkinfo-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .walkinfo-header h2 {
+            font-size: 2.5rem;
+            color: var(--forest-dark);
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+        
+        .header-subtitle {
+            font-size: 1.125rem;
+            color: var(--sage-green);
+            font-weight: 500;
+        }
+        
+        /* Path Container */
+        .path-container {
+            position: relative;
+            height: 450px;
+            margin-bottom: 100px;
+        }
+        
+        .simple-path {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+        
+        /* Info Stops */
+        .info-stops {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+        }
+        
+        .info-stop {
+            position: absolute;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .stop-dot {
+            width: 16px;
+            height: 16px;
+            background: var(--primary-green);
+            border-radius: 50%;
+            margin: 0 auto 16px;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        
+        .stop-dot::before {
+            content: '';
+            position: absolute;
+            top: -8px;
+            left: -8px;
+            right: -8px;
+            bottom: -8px;
+            border: 2px solid var(--primary-green);
+            border-radius: 50%;
+            opacity: 0.3;
+        }
+        
+        .info-stop:hover .stop-dot {
+            transform: scale(1.3);
+            background: var(--sage-green);
+        }
+        
+        .info-card {
+            background: white;
+            padding: 24px;
+            border-radius: 12px;
+            width: 250px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            border-left: 4px solid var(--primary-green);
+        }
+        
+        .info-stop:hover .info-card {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(45, 95, 63, 0.15);
+        }
+        
+        .card-number {
+            display: inline-block;
+            background: var(--leaf-light);
+            color: var(--primary-green);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+        
+        .info-card h3 {
+            font-size: 1.125rem;
+            color: var(--forest-dark);
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+        
+        .info-card p {
+            font-size: 0.9rem;
+            color: var(--text-gray);
+            line-height: 1.6;
+            margin: 0;
+        }
+        
+        /* Environmental Awareness Section */
+        .environment-section {
+            background: linear-gradient(135deg, #E8F5E8 0%, #F0FFF4 100%);
+            padding: 48px;
+            border-radius: 20px;
+            margin-bottom: 60px;
+            text-align: center;
+        }
+        
+        .env-content h3 {
+            font-size: 1.75rem;
+            color: var(--forest-dark);
+            margin-bottom: 16px;
+            font-weight: 600;
+        }
+        
+        .env-content p {
+            font-size: 1.125rem;
+            color: var(--text-gray);
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+        
+        /* Questions Collection Section */
+        .questions-collection {
+            background: white;
+            border-radius: 24px;
+            padding: 48px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+        
+        .questions-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .questions-header h3 {
+            font-size: 1.75rem;
+            color: var(--forest-dark);
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+        
+        .questions-header p {
+            font-size: 1rem;
+            color: var(--text-gray);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .questions-form-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            align-items: start;
+        }
+        
+        .form-section h4 {
+            font-size: 1.25rem;
+            color: var(--forest-dark);
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        .question-form textarea {
+            width: 100%;
+            padding: 16px;
+            border: 2px solid #E5E7EB;
+            border-radius: 12px;
+            font-size: 1rem;
+            font-family: inherit;
+            resize: vertical;
+            transition: all 0.3s ease;
+            background: #FAFBFC;
+        }
+        
+        .question-form textarea:focus {
+            outline: none;
+            border-color: var(--primary-green);
+            background: white;
+            box-shadow: 0 0 0 3px rgba(45, 95, 63, 0.1);
+        }
+        
+        .form-footer {
+            display: flex;
+            gap: 16px;
+            margin-top: 20px;
+            align-items: center;
+        }
+        
+        .question-category {
+            flex: 1;
+            padding: 12px 16px;
+            border: 2px solid #E5E7EB;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            background: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .question-category:focus {
+            outline: none;
+            border-color: var(--primary-green);
+        }
+        
+        .submit-question {
+            background: var(--primary-green);
+            color: white;
+            padding: 12px 28px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .submit-question:hover {
+            background: var(--forest-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(45, 95, 63, 0.2);
+        }
+        
+        .suggested-topics h4 {
+            font-size: 1.25rem;
+            color: var(--forest-dark);
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        .topics-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        
+        .topic-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 16px;
+            background: linear-gradient(135deg, #F0FFF4 0%, #E8F5E8 100%);
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        
+        .topic-item:hover {
+            background: linear-gradient(135deg, #E8F5E8 0%, #D4E4D4 100%);
+            transform: translateX(4px);
+        }
+        
+        .topic-number {
+            width: 32px;
+            height: 32px;
+            background: var(--primary-green);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9rem;
+            font-weight: 700;
+        }
+        
+        .topic-item span:last-child {
+            font-size: 0.95rem;
+            color: var(--forest-dark);
+            font-weight: 500;
+        }
+        
+        /* Testimonials Section - Community Style */
+        .testimonials {
+            background: #FAFBFC;
+            padding: 80px 0;
+        }
+        
+        .testimonials-header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 24px;
+            margin-bottom: 48px;
+        }
+        
+        .testimonial-card {
+            background: white;
+            padding: 32px;
+            border-radius: 20px;
+            position: relative;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+        }
+        
+        .testimonial-card.featured {
+            transform: scale(1.05);
+            box-shadow: 0 8px 30px rgba(45, 95, 63, 0.12);
+            border: 2px solid var(--mint-green);
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .quote-emoji {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 2rem;
+            opacity: 0.3;
+        }
+        
+        .testimonial-content {
+            margin-bottom: 24px;
+        }
+        
+        .testimonial-content p {
+            color: var(--text-dark);
+            line-height: 1.8;
+            font-size: 1rem;
+        }
+        
+        .testimonial-footer {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .author-avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 600;
+            font-size: 1rem;
+        }
+        
+        .author-info {
+            flex: 1;
+        }
+        
+        .author-info strong {
+            display: block;
+            color: var(--forest-dark);
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+        
+        .author-info span {
+            font-size: 0.875rem;
+            color: var(--text-gray);
+        }
+        
+        .author-badge {
+            background: linear-gradient(135deg, var(--leaf-light), #E8FFF0);
+            color: var(--primary-green);
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+        
+        .testimonials-stats {
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+        }
+        
+        .stat-bubble {
+            text-align: center;
+            padding: 20px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+            transition: all 0.3s ease;
+        }
+        
+        .stat-bubble:hover {
+            transform: scale(1.1);
+        }
+        
+        .stat-num {
+            display: block;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-green);
+            margin-bottom: 4px;
+        }
+        
+        .stat-text {
+            font-size: 0.875rem;
+            color: var(--text-gray);
+        }
+        
+        /* Expected Outcomes Section */
+        .expected-outcomes {
+            background: #F8FFF9;
+            padding: var(--space-xl) 0 var(--space-lg);
+        }
+        
+        .outcomes-header {
+            text-align: center;
+            margin-bottom: var(--space-lg);
+        }
+        
+        .outcomes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--space-md);
+            margin-bottom: var(--space-md);
+        }
+        
+        .outcome-card {
+            background: white;
+            padding: var(--space-lg);
+            border-radius: 20px;
+            position: relative;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            background: linear-gradient(white, white) padding-box,
+                        linear-gradient(135deg, var(--leaf-light), transparent) border-box;
+        }
+        
+        .outcome-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(45, 95, 63, 0.1);
+        }
+        
+        .outcome-number {
+            position: absolute;
+            top: 24px;
+            right: 32px;
+            font-size: 3rem;
+            font-weight: 900;
+            color: var(--leaf-light);
+            opacity: 0.5;
+            line-height: 1;
+        }
+        
+        .outcome-card h3 {
+            color: var(--forest-dark);
+            font-size: 1.5rem;
+            margin-bottom: 16px;
+            font-weight: 700;
+        }
+        
+        .outcome-text {
+            color: var(--text-gray);
+            line-height: 1.8;
+            margin-bottom: 32px;
+            font-size: 1rem;
+        }
+        
+        .outcome-metrics {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+        
+        .metric {
+            padding: 8px 16px;
+            background: var(--leaf-light);
+            color: var(--primary-green);
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            transition: all 0.2s ease;
+        }
+        
+        .metric:hover {
+            background: var(--primary-green);
+            color: white;
+            transform: scale(1.05);
+        }
+        
+        .project-goals {
+            padding: var(--space-md) 0 0;
+            max-width: 1000px;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        .goals-header {
+            text-align: center;
+            margin-bottom: var(--space-lg);
+            position: relative;
+        }
+        
+        .goals-number {
+            display: inline-block;
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--primary-green);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            opacity: 0.7;
+        }
+        
+        .project-goals h3 {
+            font-size: 2rem;
+            color: var(--forest-dark);
+            margin: 0 0 8px 0;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+        
+        .goals-subtitle {
+            color: var(--text-gray);
+            margin: 0;
+            font-size: 1rem;
+        }
+        
+        .path-container {
+            position: relative;
+            padding: 10px 0;
+        }
+        
+        .trail-path {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 120px;
+            transform: translateY(-50%);
+            z-index: 0;
+        }
+        
+        .path-svg {
+            width: 100%;
+            height: 100%;
+        }
+        
+        .milestone-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: var(--space-lg);
+            position: relative;
+            z-index: 1;
+            margin-bottom: 0;
+        }
+        
+        .milestone {
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .milestone:hover {
+            transform: scale(1.05);
+        }
+        
+        .milestone-marker {
+            position: relative;
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 20px;
+        }
+        
+        .marker-ring {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border: 3px solid rgba(45, 95, 63, 0.2);
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+        
+        .marker-dot {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 24px;
+            height: 24px;
+            background: var(--primary-green);
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+        
+        .milestone:hover .marker-ring {
+            border-color: var(--primary-green);
+            transform: scale(1.1);
+            box-shadow: 0 0 20px rgba(45, 95, 63, 0.2);
+        }
+        
+        .milestone:hover .marker-dot {
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(135deg, var(--primary-green), var(--leaf-light));
+        }
+        
+        .milestone-info {
+            position: relative;
+        }
+        
+        .milestone-value {
+            font-size: 2.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--forest-dark), var(--primary-green));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 8px;
+            line-height: 1;
+        }
+        
+        .milestone-label {
+            font-size: 0.95rem;
+            color: var(--text-gray);
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+        
+        /* Add subtle animation */
+        @keyframes pulse {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 0.6; }
+        }
+        
+        .marker-ring::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
+            border: 1px solid var(--leaf-light);
+            border-radius: 50%;
+            animation: pulse 3s ease-in-out infinite;
+        }
+        
+        .milestone:nth-child(1) .marker-ring::before { animation-delay: 0s; }
+        .milestone:nth-child(2) .marker-ring::before { animation-delay: 0.5s; }
+        .milestone:nth-child(3) .marker-ring::before { animation-delay: 1s; }
+        .milestone:nth-child(4) .marker-ring::before { animation-delay: 1.5s; }
+        
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .milestone-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 40px;
+            }
+            
+            .trail-path {
+                display: none;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .milestone-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            /* Ripple Effect for Small Phones */
+            .ripple-section h3 {
+                font-size: 1.5rem;
+            }
+            
+            .ripple-container {
+                padding: var(--space-sm);
+                height: 400px !important;
+                overflow: hidden;
+            }
+            
+            .ring-3 {
+                width: 350px !important;
+                height: 350px !important;
+            }
+            
+            .ring-2 {
+                width: 250px !important;
+                height: 250px !important;
+            }
+            
+            .ring-1 {
+                width: 150px !important;
+                height: 150px !important;
+            }
+            
+            .ripple-center {
+                width: 60px !important;
+                height: 60px !important;
+            }
+            
+            .ripple-center span {
+                font-size: 0.9rem;
+            }
+            
+            .impact-point {
+                padding: var(--space-sm) !important;
+                width: 120px !important;
+                position: absolute !important;
+            }
+            
+            .point-1 { top: 5% !important; }
+            .point-2 { right: 2% !important; }
+            .point-3 { bottom: 5% !important; }
+            .point-4 { left: 2% !important; }
+            
+            .point-content h4 {
+                font-size: 1rem;
+            }
+            
+            .point-content p {
+                font-size: 0.85rem;
+            }
+        }
+
+        /* About Section - Community Style */
+        .about {
+            background: linear-gradient(180deg, #FFFFFF 0%, #F0FFF4 100%);
+            padding: var(--space-lg) 0 var(--space-xl);
+        }
+        
+        .about-header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+        
+        /* Why We Walk Section */
+        .why-we-walk-section {
+            text-align: center;
+            margin-bottom: var(--space-xl);
+        }
+        
+        .why-card {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: var(--space-lg) var(--space-xl);
+            border-radius: 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+        
+        .why-card h3 {
+            font-size: 2rem;
+            color: var(--forest-dark);
+            margin-bottom: var(--space-md);
+        }
+        
+        .why-card p {
+            font-size: 1.125rem;
+            color: var(--text-gray);
+            line-height: 1.8;
+            margin-bottom: var(--space-lg);
+        }
+        
+        .values-list {
+            display: flex;
+            justify-content: space-between;
+            gap: var(--space-md);
+            flex-wrap: wrap;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .value {
+            background: var(--leaf-light);
+            color: var(--primary-green);
+            padding: var(--space-sm) var(--space-md);
+            border-radius: 25px;
+            font-weight: 600;
+            font-size: 1rem;
+        }
+        
+        /* Ripple Effect Section */
+        .ripple-section {
+            margin-bottom: var(--space-xl);
+            display: block;
+        }
+        
+        .ripple-section h3 {
+            text-align: center;
+            font-size: 2rem;
+            color: var(--forest-dark);
+            margin-bottom: var(--space-xl);
+        }
+        
+        /* Mobile version - hidden by default */
+        .ripple-section-mobile {
+            display: none !important;
+        }
+        
+        .ripple-container {
+            position: relative;
+            width: 100%;
+            max-width: 900px;
+            height: 700px;
+            margin: 0 auto 40px;
+        }
+        
+        /* Ripple Center */
+        .ripple-center {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80px;
+            height: 80px;
+            background: var(--primary-green);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+            box-shadow: 0 4px 20px rgba(45, 95, 63, 0.3);
+        }
+        
+        .ripple-center span {
+            color: white;
+            font-weight: 700;
+            font-size: 1.25rem;
+        }
+        
+        /* Ripple Rings */
+        .ripple-ring {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: 2px solid var(--sage-green);
+            border-radius: 50%;
+            opacity: 0.3;
+        }
+        
+        .ring-1 {
+            width: 200px;
+            height: 200px;
+            animation: ripple-expand 4s ease-out infinite;
+        }
+        
+        .ring-2 {
+            width: 400px;
+            height: 400px;
+            animation: ripple-expand 4s ease-out infinite 1.3s;
+        }
+        
+        .ring-3 {
+            width: 600px;
+            height: 600px;
+            animation: ripple-expand 4s ease-out infinite 2.6s;
+        }
+        
+        @keyframes ripple-expand {
+            0% {
+                opacity: 0.6;
+                transform: translate(-50%, -50%) scale(0.8);
+            }
+            50% {
+                opacity: 0.3;
+            }
+            100% {
+                opacity: 0.1;
+                transform: translate(-50%, -50%) scale(1);
+            }
+        }
+        
+        /* Impact Points */
+        .impact-point {
+            position: absolute;
+            width: 180px;
+            opacity: 0;
+            animation: fadeInPoint 1s ease-out forwards;
+        }
+        
+        .point-1 {
+            top: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+            animation-delay: 0.5s;
+        }
+        
+        .point-2 {
+            top: 50%;
+            right: 5%;
+            transform: translateY(-50%);
+            animation-delay: 1s;
+        }
+        
+        .point-3 {
+            bottom: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+            animation-delay: 1.5s;
+        }
+        
+        .point-4 {
+            top: 50%;
+            left: 5%;
+            transform: translateY(-50%);
+            animation-delay: 2s;
+        }
+        
+        @keyframes fadeInPoint {
+            to {
+                opacity: 1;
+            }
+        }
+        
+        .point-content {
+            background: white;
+            padding: 20px;
+            border-radius: 16px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            border-left: 4px solid var(--primary-green);
+            transition: all 0.3s ease;
+        }
+        
+        .impact-point:hover .point-content {
+            transform: scale(1.05);
+            box-shadow: 0 6px 25px rgba(45, 95, 63, 0.15);
+        }
+        
+        .point-content h4 {
+            font-size: 1rem;
+            color: var(--forest-dark);
+            margin-bottom: 4px;
+            font-weight: 600;
+        }
+        
+        .point-content p {
+            font-size: 0.875rem;
+            color: var(--text-gray);
+            margin: 0;
+        }
+        
+        .ripple-description {
+            text-align: center;
+            font-size: 1.125rem;
+            color: var(--sage-green);
+            font-weight: 500;
+            font-style: italic;
+        }
+        
+        /* Inspiration Quote */
+        .inspiration-quote {
+            background: linear-gradient(135deg, var(--leaf-light), #E8FFF0);
+            padding: 32px;
+            border-radius: 20px;
+            text-align: center;
+        }
+        
+        .inspiration-quote blockquote {
+            font-size: 1.5rem;
+            color: var(--forest-dark);
+            font-weight: 600;
+            line-height: 1.6;
+            margin: 0;
+        }
+        
+        .inspiration-quote .quote-author {
+            display: block;
+            margin-top: 16px;
+            font-size: 1rem;
+            color: var(--primary-green);
+        }
+        
+        /* Registration Section - Community Style */
+        .registration {
+            background: #FAFBFC;
+            padding: 80px 0;
+        }
+        
+        .registration-content {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .form-header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+        
+        .form-subtitle {
+            font-size: 1.125rem;
+            color: var(--text-gray);
+            margin-top: 8px;
+        }
+        
+        .form-container {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 48px;
+            background: white;
+            padding: 48px;
+            border-radius: 24px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+        }
+        
+        .form-sidebar h3 {
+            font-size: 1.25rem;
+            color: var(--forest-dark);
+            margin-bottom: 24px;
+        }
+        
+        .process-steps {
+            margin-bottom: 32px;
+        }
+        
+        .step {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 16px;
+        }
+        
+        .step-num {
+            width: 32px;
+            height: 32px;
+            background: var(--primary-green);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        
+        .step p {
+            color: var(--text-gray);
+            font-size: 0.95rem;
+        }
+        
+        .guarantee {
+            background: linear-gradient(135deg, #E8F5E8, #F0FFF4);
+            padding: 20px;
+            border-radius: 16px;
+            display: flex;
+            gap: 12px;
+        }
+        
+        .guarantee-icon {
+            font-size: 1.5rem;
+        }
+        
+        .guarantee p {
+            font-size: 0.875rem;
+            color: var(--text-dark);
+            line-height: 1.5;
+        }
+        
+        .friendly-form {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .form-greeting {
+            background: linear-gradient(135deg, #FFE4E1, #FFF0F5);
+            padding: 16px;
+            border-radius: 12px;
+            text-align: center;
+        }
+        
+        .form-greeting p {
+            color: var(--forest-dark);
+            font-weight: 500;
+            margin: 0;
+        }
+        
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        
+        .form-label {
+            font-size: 0.95rem;
+            color: var(--forest-dark);
+            font-weight: 600;
+        }
+        
+        .name-inputs {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+        
+        .friendly-input,
+        .friendly-select {
+            padding: 12px 16px;
+            border: 2px solid #E5E7EB;
+            border-radius: 12px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            background: white;
+        }
+        
+        .friendly-input:focus,
+        .friendly-select:focus {
+            outline: none;
+            border-color: var(--primary-green);
+            box-shadow: 0 0 0 3px rgba(45, 95, 63, 0.1);
+        }
+        
+        .consent-box {
+            background: var(--leaf-light);
+            padding: 16px;
+            border-radius: 12px;
+        }
+        
+        .friendly-checkbox {
+            display: flex;
+            align-items: start;
+            gap: 12px;
+            cursor: pointer;
+        }
+        
+        .friendly-checkbox input {
+            width: 20px;
+            height: 20px;
+            margin-top: 2px;
+            cursor: pointer;
+        }
+        
+        .friendly-checkbox span {
+            font-size: 0.9rem;
+            color: var(--text-dark);
+            line-height: 1.5;
+        }
+        
+        .submit-button {
+            background: var(--primary-green);
+            color: white;
+            padding: 18px 40px;
+            border: none;
+            border-radius: 30px;
+            font-size: 1.125rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .submit-button:hover {
+            background: var(--forest-dark);
+            transform: scale(1.02);
+            box-shadow: 0 10px 30px rgba(45, 95, 63, 0.3);
+        }
+        
+        .form-footer {
+            text-align: center;
+            color: var(--text-gray);
+            font-size: 0.9rem;
+            margin: 0;
+        }
+        
+        /* QR Code Section */
+        .qr-section {
+            background: linear-gradient(135deg, var(--leaf-light) 0%, #ffffff 100%);
+            padding: 4rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .qr-section::before {
+            content: '';
+            position: absolute;
+            top: -50px;
+            left: 0;
+            right: 0;
+            height: 100px;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 100"><path fill="%23ffffff" d="M0,50 Q360,0 720,50 T1440,50 L1440,0 L0,0 Z"></path></svg>');
+            background-size: cover;
+        }
+        
+        .qr-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+        }
+        
+        .qr-content {
+            text-align: center;
+            max-width: 400px;
+        }
+        
+        .qr-content h3 {
+            color: var(--forest-dark);
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+        
+        .qr-content p {
+            color: var(--text-gray);
+            font-size: 1.1rem;
+        }
+        
+        .qr-code-wrapper {
+            position: relative;
+            background: white;
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(45, 95, 63, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .qr-code-wrapper:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(45, 95, 63, 0.15);
+        }
+        
+        .qr-code-placeholder {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: white;
+            border-radius: 8px;
+        }
+        
+        .qr-overlay-text {
+            position: absolute;
+            bottom: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 0.75rem;
+            color: var(--sage-green);
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        
+        .qr-decoration {
+            position: absolute;
+            top: -15px;
+            right: -15px;
+            background: var(--mint-green);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 10px rgba(152, 255, 152, 0.3);
+        }
+        
+        .leaf-icon {
+            font-size: 1.2rem;
+            animation: gentle-sway 3s ease-in-out infinite;
+        }
+        
+        @keyframes gentle-sway {
+            0%, 100% { transform: rotate(-5deg); }
+            50% { transform: rotate(5deg); }
+        }
+        
+        /* Mobile responsiveness for QR section */
+        @media (max-width: 768px) {
+            .qr-container {
+                flex-direction: column;
+                gap: 2rem;
+            }
+            
+            .qr-content h3 {
+                font-size: 1.5rem;
+            }
+            
+            .qr-code-wrapper {
+                padding: 1.5rem;
+            }
+        }
+        
+        /* Footer */
+        .footer {
+            background: var(--forest-dark);
+            color: white;
+            padding: 3rem 0 1.5rem;
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .footer-logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--mint-green);
+        }
+        
+        .footer-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: var(--mint-green);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 1.5rem;
+        }
+        
+        .footer-bottom p {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.95rem;
+        }
+        
+        /* Tablet Responsive */
+        @media (max-width: 1024px) {
+            .ripple-container {
+                height: 500px;
+                max-width: 600px;
+            }
+            
+            .impact-point {
+                width: 140px;
+                height: 140px;
+            }
+            
+            .point-content h4 {
+                font-size: 0.9rem;
+            }
+            
+            .point-content p {
+                font-size: 0.8rem;
+            }
+        }
+        
+        /* Tablet Responsive */
+        @media (max-width: 1024px) and (min-width: 769px) {
+            .journey-timeline {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 30px;
+            }
+            
+            .journey-timeline::before {
+                display: none;
+            }
+            
+            .timeline-item {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            
+            .timeline-dot {
+                width: 50px;
+                height: 50px;
+                margin-bottom: 16px;
+                background: linear-gradient(135deg, var(--sage-green), var(--mint-green));
+                box-shadow: 0 4px 10px rgba(45, 95, 63, 0.2);
+            }
+            
+            .timeline-content {
+                width: 100%;
+                max-width: 250px;
+            }
+            
+            .event-main-cards {
+                gap: 20px;
+            }
+            
+            /* Walk & Talk Section Tablet */
+            .walkinfo .path-container {
+                height: 500px;
+            }
+            
+            .info-stops {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 24px;
+            }
+            
+            .info-stop {
+                position: absolute !important;
+            }
+            
+            .info-stop:nth-child(1) { left: 15%; top: 20%; }
+            .info-stop:nth-child(2) { left: 60%; top: 35%; }
+            .info-stop:nth-child(3) { left: 15%; top: 60%; }
+            .info-stop:nth-child(4) { left: 60%; top: 75%; }
+            
+            .info-card {
+                width: 220px;
+            }
+            
+            .stop-dot {
+                width: 20px;
+                height: 20px;
+                background: var(--primary-green);
+                box-shadow: 0 2px 8px rgba(45, 95, 63, 0.3);
+            }
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            * {
+                max-width: 100vw !important;
+            }
+            
+            html, body {
+                overflow-x: hidden !important;
+                width: 100% !important;
+                position: relative !important;
+            }
+            
+            .event-details::before {
+                right: -50%;
+                width: 300px;
+                height: 300px;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .container {
+                padding: 0 1rem;
+                max-width: 100%;
+            }
+            
+            /* Walk & Talk Section Mobile */
+            .walkinfo {
+                padding: 60px 0;
+            }
+            
+            .path-container {
+                height: auto;
+                margin-bottom: 40px;
+            }
+            
+            .simple-path {
+                display: none;
+            }
+            
+            .info-stops {
+                position: static;
+                display: flex;
+                flex-direction: column;
+                gap: 32px;
+                padding: 0 10px;
+            }
+            
+            .info-stop {
+                position: static !important;
+                display: flex;
+                align-items: flex-start;
+                gap: 20px;
+            }
+            
+            .stop-dot {
+                width: 60px;
+                height: 60px;
+                background: linear-gradient(135deg, var(--primary-green), var(--sage-green));
+                flex-shrink: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                box-shadow: 0 4px 15px rgba(45, 95, 63, 0.3);
+                position: relative;
+                margin: 0;
+            }
+            
+            .stop-dot::before {
+                display: none;
+            }
+            
+            .stop-dot::after {
+                content: attr(data-number);
+                position: absolute;
+                color: white;
+                font-size: 1.5rem;
+                font-weight: 700;
+            }
+            
+            .info-stop:nth-child(1) .stop-dot::after { content: "1"; }
+            .info-stop:nth-child(2) .stop-dot::after { content: "2"; }
+            .info-stop:nth-child(3) .stop-dot::after { content: "3"; }
+            .info-stop:nth-child(4) .stop-dot::after { content: "4"; }
+            
+            .info-card {
+                width: 100%;
+                flex: 1;
+                padding: 20px;
+                margin: 0;
+                background: white;
+                border-radius: 16px;
+                box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+                border-left: 4px solid var(--primary-green);
+                position: relative;
+            }
+            
+            .info-card::before {
+                content: '';
+                position: absolute;
+                left: -12px;
+                top: 20px;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 8px 12px 8px 0;
+                border-color: transparent white transparent transparent;
+            }
+            
+            .card-number {
+                display: none;
+            }
+            
+            .info-card h3 {
+                font-size: 1.2rem;
+                color: var(--forest-dark);
+                margin-bottom: 10px;
+                font-weight: 600;
+            }
+            
+            .info-card p {
+                font-size: 0.95rem;
+                color: var(--text-gray);
+                line-height: 1.6;
+                margin: 0;
+            }
+            
+            .info-stop:hover .stop-dot {
+                transform: scale(1.1) rotate(5deg);
+                background: linear-gradient(135deg, var(--sage-green), var(--mint-green));
+            }
+            
+            .info-stop:hover .info-card {
+                box-shadow: 0 6px 20px rgba(45, 95, 63, 0.15);
+                transform: translateX(5px);
+            }
+            
+            .environment-section {
+                padding: 32px 24px;
+                margin-bottom: 40px;
+            }
+            
+            .questions-collection {
+                padding: 32px 20px;
+            }
+            
+            .questions-form-container {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+            
+            .form-footer {
+                flex-direction: column;
+                gap: 12px;
+            }
+            
+            .question-category,
+            .submit-question {
+                width: 100%;
+            }
+            
+            .topics-list {
+                gap: 8px;
+            }
+            
+            .topic-item {
+                padding: 10px 12px;
+            }
+            
+            /* About Section Mobile */
+            .why-card {
+                padding: 32px 20px;
+            }
+            
+            .values-list {
+                gap: 16px;
+            }
+            
+            /* Simplified Ripple Effect for Mobile */
+            .ripple-section {
+                display: none;
+            }
+            
+            /* Replace with simple text version */
+            .ripple-section-mobile {
+                display: block;
+                text-align: center;
+                padding: var(--space-lg) var(--space-md);
+                background: white;
+                border-radius: 20px;
+                margin-bottom: var(--space-lg);
+            }
+            
+            .ripple-section-mobile h3 {
+                font-size: 1.5rem;
+                color: var(--forest-dark);
+                margin-bottom: var(--space-md);
+            }
+            
+            .ripple-section-mobile .impact-list {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+            }
+            
+            .ripple-section-mobile .impact-list li {
+                padding: var(--space-sm);
+                margin-bottom: var(--space-xs);
+                background: var(--leaf-light);
+                border-radius: 10px;
+                color: var(--forest-dark);
+                font-weight: 500;
+            }
+            
+            .hero-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+                padding: 0 1rem;
+            }
+            
+            .hero-buttons {
+                justify-content: center;
+            }
+            
+            .hero-stats {
+                justify-content: center;
+                flex-direction: column;
+                align-items: center;
+                gap: 1.5rem;
+                padding: 2rem 0;
+            }
+            
+            .stat {
+                text-align: center;
+                background: rgba(255, 255, 255, 0.9);
+                padding: 1rem 2rem;
+                border-radius: 15px;
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+                min-width: 200px;
+            }
+            
+            .stat-number {
+                font-size: 1.75rem;
+            }
+            
+            .stat-label {
+                font-size: 0.9rem;
+                margin-top: 0.25rem;
+            }
+            
+            .hero-visual {
+                margin-top: 2rem;
+                max-width: 90%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            
+            .event-main-cards {
+                grid-template-columns: 1fr;
+                padding: 0 1rem;
+                gap: 20px;
+            }
+            
+            .journey-timeline {
+                grid-template-columns: 1fr;
+                padding: 0 1rem;
+                gap: 24px;
+                padding: 0;
+            }
+            
+            .journey-timeline::before {
+                display: none;
+            }
+            
+            /* Improved mobile timeline appearance */
+            .timeline-item {
+                display: flex;
+                align-items: flex-start;
+                gap: 20px;
+                position: relative;
+            }
+            
+            .timeline-dot {
+                width: 60px;
+                height: 60px;
+                flex-shrink: 0;
+                margin: 0;
+                background: linear-gradient(135deg, var(--sage-green), var(--mint-green));
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                box-shadow: 0 4px 12px rgba(45, 95, 63, 0.2);
+            }
+            
+            .timeline-dot::after {
+                content: counter(timeline-step);
+                counter-increment: timeline-step;
+                position: absolute;
+                font-size: 1.5rem;
+                font-weight: 700;
+                color: white;
+            }
+            
+            .timeline-item:nth-child(1) .timeline-dot::after { content: "1"; }
+            .timeline-item:nth-child(2) .timeline-dot::after { content: "2"; }
+            .timeline-item:nth-child(3) .timeline-dot::after { content: "3"; }
+            .timeline-item:nth-child(4) .timeline-dot::after { content: "4"; }
+            
+            .timeline-content {
+                flex: 1;
+                background: white;
+                padding: 20px;
+                border-radius: 16px;
+                box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+                border-left: 4px solid var(--mint-green);
+                position: relative;
+            }
+            
+            .timeline-content::before {
+                content: '';
+                position: absolute;
+                left: -12px;
+                top: 20px;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 8px 12px 8px 0;
+                border-color: transparent white transparent transparent;
+            }
+            
+            .timeline-content h4 {
+                font-size: 1.15rem;
+                margin-bottom: 8px;
+                color: var(--forest-dark);
+                font-weight: 600;
+            }
+            
+            .timeline-content p {
+                font-size: 0.95rem;
+                color: var(--text-gray);
+                margin: 0;
+            }
+            
+            .timeline-item:hover .timeline-dot {
+                transform: scale(1.1) rotate(5deg);
+                background: linear-gradient(135deg, var(--primary-green), var(--sage-green));
+            }
+            
+            .timeline-item:hover .timeline-content {
+                box-shadow: 0 6px 20px rgba(45, 95, 63, 0.15);
+                transform: translateX(5px);
+            }
+            
+            .community-features {
+                gap: 12px;
+            }
+            
+            .feature {
+                flex: 1 1 45%;
+                min-width: 150px;
+                padding: 10px 16px;
+            }
+            
+            .header-title {
+                font-size: 1.75rem;
+            }
+            
+            /* Conversation Topics Mobile */
+            .conversation-topics {
+                padding: 24px;
+                margin-top: 20px;
+                margin-left: 0;
+                margin-right: 0;
+                border-radius: 0;
+            }
+            
+            .conversation-topics::before {
+                right: -50%;
+                width: 200px;
+                height: 200px;
+            }
+            
+            .topics-grid {
+                grid-template-columns: 1fr;
+                padding: 0 0.5rem;
+                gap: 20px;
+            }
+            
+            .topic-column {
+                padding: 20px;
+            }
+            
+            .column-emoji {
+                font-size: 1.5rem;
+            }
+            
+            .topic-cards {
+                gap: 12px;
+            }
+            
+            .topic-card {
+                padding: 10px;
+            }
+            
+            .topic-icon {
+                font-size: 1.25rem;
+            }
+            
+            .topic-content h5 {
+                font-size: 0.95rem;
+            }
+            
+            .topic-content p {
+                font-size: 0.8rem;
+            }
+            
+            .conversation-tips {
+                padding: 20px;
+            }
+            
+            .tips-list {
+                flex-direction: column;
+                gap: 12px;
+            }
+            
+            .tip {
+                justify-content: center;
+            }
+            
+            /* Reduce leaves on mobile for performance */
+            .leaf-3, .leaf-4, .leaf-5 {
+                display: none;
+            }
+            
+            /* Benefits Path Mobile Adjustments */
+            .benefits-header h2 {
+                font-size: 2rem;
+            }
+            
+            .trail-marker {
+                font-size: 0.9rem;
+                padding: 10px 20px;
+            }
+            
+            .path-journey {
+                height: 500px;
+                margin: 40px 0;
+            }
+            
+            .benefit-stop {
+                position: relative !important;
+                left: auto !important;
+                right: auto !important;
+                top: auto !important;
+                margin: 30px auto;
+                display: block;
+                text-align: center;
+            }
+            
+            .benefit-stops {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 40px;
+                padding: 40px 0;
+            }
+            
+            .walking-path {
+                display: none; /* Hide complex path on mobile */
+            }
+            
+            .benefit-content {
+                position: relative !important;
+                top: auto !important;
+                left: auto !important;
+                transform: none !important;
+                width: 100% !important;
+                max-width: 300px;
+                opacity: 1 !important;
+                visibility: visible !important;
+                margin: 0 auto;
+            }
+            
+            .journey-end {
+                position: relative !important;
+                right: auto !important;
+                top: auto !important;
+                margin: 40px auto 0;
+            }
+            
+            .cta-content {
+                padding: 30px 20px;
+                margin: 0 20px;
+            }
+            
+            .cta-content h3 {
+                font-size: 1.5rem;
+            }
+            
+            .path-cta-btn {
+                padding: 14px 30px;
+                font-size: 1rem;
+            }
+            
+            /* Hide complex animations on mobile for better performance */
+            .park-scene,
+            .floating-leaves,
+            .birds {
+                display: none;
+            }
+            
+            .park-trees .tree-4,
+            .park-trees .tree-5 {
+                display: none;
+            }
+            
+            .benefits-grid,
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .testimonials-stats {
+                flex-direction: column;
+                gap: 16px;
+            }
+            
+            .about-main {
+                grid-template-columns: 1fr;
+            }
+            
+            .impact-cards {
+                grid-template-columns: 1fr;
+            }
+            
+            .form-container {
+                grid-template-columns: 1fr;
+                padding: 24px;
+            }
+            
+            .form-sidebar {
+                display: none;
+            }
+            
+            .name-inputs {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+                gap: 1.5rem;
+                text-align: center;
+            }
+            
+            .footer-links {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            h2 {
+                font-size: 2rem;
+            }
+            
+            section {
+                padding: 3rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Global Falling Leaves - Reduced for better performance -->
+    <div class="global-leaves" aria-hidden="true">
+        <div class="leaf-fall leaf-1"></div>
+        <div class="leaf-fall leaf-2"></div>
+        <div class="leaf-fall leaf-3"></div>
+        <div class="leaf-fall leaf-4"></div>
+        <div class="leaf-fall leaf-5"></div>
+    </div>
+    
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">Walk & Talk</div>
+            <a href="#register" class="nav-cta">Join Walk</a>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-container">
+            <div class="hero-content">
+                <span class="hero-badge">Mental Health Awareness Initiative 2025</span>
+                <h1>
+                    Find Your Peace<br>
+                    <span class="gradient-text">One Step at a Time</span>
+                </h1>
+                <p class="hero-description">
+                    Be part of something new! We're launching a supportive community for therapeutic walks. 
+                    Help us create a space where mental health meets communication and connection.
+                </p>
+                
+                <div class="hero-buttons">
+                
+                </div>
+                
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">Aug 2025</span>
+                        <span class="stat-label">Starting Date</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">Community</span>
+                        <span class="stat-label">Walk Events</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Inclusive</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero-visual">
+                <!-- Modern SVG Illustration -->
+                <svg class="nature-illustration" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Background Circle -->
+                    <circle cx="250" cy="250" r="240" fill="#E8F5E8" opacity="0.5"/>
+                    
+                    <!-- Trees -->
+                    <g class="trees">
+                        <!-- Tree 1 -->
+                        <rect x="150" y="250" width="20" height="100" fill="#2D5F3F"/>
+                        <circle cx="160" cy="240" r="40" fill="#87A96B" opacity="0.8"/>
+                        <circle cx="145" cy="230" r="30" fill="#98FF98" opacity="0.6"/>
+                        
+                        <!-- Tree 2 -->
+                        <rect x="250" y="270" width="25" height="80" fill="#2D5F3F"/>
+                        <circle cx="262" cy="260" r="50" fill="#87A96B" opacity="0.9"/>
+                        <circle cx="275" cy="250" r="35" fill="#98FF98" opacity="0.5"/>
+                        
+                        <!-- Tree 3 -->
+                        <rect x="330" y="260" width="18" height="90" fill="#2D5F3F"/>
+                        <circle cx="339" cy="250" r="35" fill="#87A96B" opacity="0.7"/>
+                    </g>
+                    
+                    <!-- Walking Path -->
+                    <path d="M50 400 Q250 350 450 400" stroke="#2D5F3F" stroke-width="3" fill="none" opacity="0.5"/>
+                    
+                    <!-- Walking Figures -->
+                    <g class="walkers">
+                        <g transform="translate(200, 370)">
+                            <circle cx="0" cy="0" r="8" fill="#2D5F3F"/>
+                            <rect x="-4" y="8" width="8" height="20" rx="2" fill="#2D5F3F"/>
+                        </g>
+                        <g transform="translate(250, 365)">
+                            <circle cx="0" cy="0" r="7" fill="#87A96B"/>
+                            <rect x="-3.5" y="7" width="7" height="18" rx="2" fill="#87A96B"/>
+                        </g>
+                        <g transform="translate(300, 370)">
+                            <circle cx="0" cy="0" r="7" fill="#2D5F3F" opacity="0.7"/>
+                            <rect x="-3.5" y="7" width="7" height="18" rx="2" fill="#2D5F3F" opacity="0.7"/>
+                        </g>
+                    </g>
+                    
+                    <!-- Birds -->
+                    <g class="birds">
+                        <path d="M100 100 Q105 95 110 100" stroke="#2D5F3F" stroke-width="2" fill="none"/>
+                        <path d="M120 110 Q125 105 130 110" stroke="#2D5F3F" stroke-width="2" fill="none"/>
+                        <path d="M85 105 Q90 100 95 105" stroke="#2D5F3F" stroke-width="1.5" fill="none"/>
+                    </g>
+                    
+                    <!-- Sun -->
+                    <circle cx="400" cy="80" r="30" fill="#FFE082" opacity="0.6"/>
+                </svg>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Event Details Section - Community Focused Design -->
+    <section class="event-details" id="event">
+        <div class="container">
+            <!-- Friendly Header -->
+            <div class="event-header">
+                <div class="header-label">Join Our Next Walk</div>
+                <h2 class="header-title">
+                    Tuesday Morning Adventure
+                    <span class="header-date">August 12</span>
+                </h2>
+                <p class="header-description">Come as you are, leave feeling better</p>
+            </div>
+            
+            <!-- Main Event Cards -->
+            <div class="event-main-cards">
+                <!-- When Card -->
+                <div class="event-card when-card">
+                    <div class="card-content">
+                        <h3>Early Morning Magic</h3>
+                        <div class="time-display">
+                            <span class="time-big">8:00 AM</span>
+                            <span class="time-duration">Fresh air & good vibes</span>
+                        </div>
+                        <p class="card-note">Perfect time to start your weekend!</p>
+                    </div>
+                    <div class="card-pattern"></div>
+                </div>
+                
+                <!-- Where Card -->
+                <div class="event-card where-card">
+                    <div class="card-content">
+                        <h3>Bukit Kiara</h3>
+                        <p class="location-desc">Nature trails & peaceful scenery</p>
+                        <p class="card-note">Bus-friendly location with shaded paths</p>
+                    </div>
+                    <div class="card-pattern"></div>
+                </div>
+                
+                <!-- Who Card -->
+                <div class="event-card who-card">
+                    <div class="card-content">
+                        <h3>Everyone Welcome!</h3>
+                        <div class="welcome-tags">
+                            <span class="tag">First-timers</span>
+                            <span class="tag">All ages</span>
+                            <span class="tag">Any fitness</span>
+                        </div>
+                        <p class="card-note">No judgment, just support</p>
+                    </div>
+                    <div class="card-pattern"></div>
+                </div>
+            </div>
+            
+            <!-- Journey Timeline -->
+            <div class="journey-section">
+                <h3 class="journey-title">Your Morning Journey</h3>
+                <div class="journey-timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h4>Warm Welcome</h4>
+                            <p>Meet new friends and connect</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h4>Group Walk</h4>
+                            <p>Easy pace, lots of chat & laughs</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h4>Mindful Moment</h4>
+                            <p>Optional sharing circle 💭</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h4>Snacks & Stories</h4>
+                            <p>Connect over healthy treats 🍎</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Community Features -->
+            <div class="community-features">
+                <div class="feature">
+                    <span class="feature-icon">💝</span>
+                    <span class="feature-text">All Inclusive</span>
+                </div>
+                <div class="feature">
+                    <span class="feature-text">25-30 friendly faces</span>
+                </div>
+                <div class="feature">
+                    <span class="feature-icon">🎒</span>
+                    <span class="feature-text">Just bring yourself</span>
+                </div>
+                <div class="feature">
+                    <span class="feature-icon">☂️</span>
+                    <span class="feature-text">Rain or shine!</span>
+                </div>
+            </div>
+            
+            <!-- Conversation Topics Section -->
+            <div class="conversation-topics">
+                <div class="topics-header">
+                    <span class="topics-badge">No Pressure, Just Connection</span>
+                    <h3>Conversation Starters & Topics</h3>
+                    <p>Not sure what to talk about? Here are some ideas to get you started. Remember, sharing is optional!</p>
+                </div>
+                
+                <div class="topics-grid">
+                    <!-- Light Topics Column -->
+                    <div class="topic-column light-topics">
+                        <div class="column-header">
+                            <span class="column-emoji">☀️</span>
+                            <h4>Light & Easy</h4>
+                            <p>Perfect for first-timers</p>
+                        </div>
+                        <div class="topic-cards">
+                            <div class="topic-card">
+                                <span class="topic-icon">🎯</span>
+                                <div class="topic-content">
+                                    <h5>Weekend Plans</h5>
+                                    <p>What brings you joy on weekends?</p>
+                                </div>
+                            </div>
+                            <div class="topic-card">
+                                <span class="topic-icon">🌱</span>
+                                <div class="topic-content">
+                                    <h5>Small Wins</h5>
+                                    <p>Share a recent accomplishment, no matter how small</p>
+                                </div>
+                            </div>
+                            <div class="topic-card">
+                                <span class="topic-icon">📚</span>
+                                <div class="topic-content">
+                                    <h5>Favorite Escapes</h5>
+                                    <p>Books, shows, or hobbies that help you unwind</p>
+                                </div>
+                            </div>
+                            <div class="topic-card">
+                                <span class="topic-icon">🍃</span>
+                                <div class="topic-content">
+                                    <h5>Nature Moments</h5>
+                                    <p>Your favorite outdoor memories or places</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Meaningful Topics Column -->
+                    <div class="topic-column meaningful-topics">
+                        <div class="column-header">
+                            <span class="column-emoji">💭</span>
+                            <h4>Deeper Connections</h4>
+                            <p>When you're ready to share more</p>
+                        </div>
+                        <div class="topic-cards">
+                            <div class="topic-card">
+                                <span class="topic-icon">💪</span>
+                                <div class="topic-content">
+                                    <h5>Coping Strategies</h5>
+                                    <p>What helps you through tough days?</p>
+                                </div>
+                            </div>
+                            <div class="topic-card">
+                                <span class="topic-icon">🌊</span>
+                                <div class="topic-content">
+                                    <h5>Life Changes</h5>
+                                    <p>Navigating transitions and new chapters</p>
+                                </div>
+                            </div>
+                            <div class="topic-card">
+                                <span class="topic-icon">🤝</span>
+                                <div class="topic-content">
+                                    <h5>Support Systems</h5>
+                                    <p>Building and maintaining connections</p>
+                                </div>
+                            </div>
+                            <div class="topic-card">
+                                <span class="topic-icon">✨</span>
+                                <div class="topic-content">
+                                    <h5>Growth Moments</h5>
+                                    <p>Lessons learned and wisdom gained</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Activity Topics Column -->
+                    <div class="topic-column activity-topics">
+                        <div class="column-header">
+                            <span class="column-emoji">🎨</span>
+                            <h4>Walk Activities</h4>
+                            <p>Things we can do together</p>
+                        </div>
+                        <div class="topic-cards">
+                            <div class="topic-card">
+                                <span class="topic-icon">👥</span>
+                                <div class="topic-content">
+                                    <h5>Walking Buddies</h5>
+                                    <p>Pair up with someone new each session</p>
+                                </div>
+                            </div>
+                            <div class="topic-card">
+                                <span class="topic-icon">📸</span>
+                                <div class="topic-content">
+                                    <h5>Photo Moments</h5>
+                                    <p>Capture nature's beauty along the trail</p>
+                                </div>
+                            </div>
+                            <div class="topic-card">
+                                <span class="topic-icon">🧘</span>
+                                <div class="topic-content">
+                                    <h5>Mindful Breaks</h5>
+                                    <p>5-minute breathing exercises together</p>
+                                </div>
+                            </div>
+                            <div class="topic-card">
+                                <span class="topic-icon">💬</span>
+                                <div class="topic-content">
+                                    <h5>Story Circle</h5>
+                                    <p>Optional sharing at rest points</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Walk & Talk Info Section - Minimalist Park Path -->
+    <section class="walkinfo" id="walkinfo">
+        <div class="container">
+            <div class="walkinfo-header">
+                <h2>Walk & Talk</h2>
+                <p class="header-subtitle">Mental Health Awareness Through Communication</p>
+            </div>
+            
+            <!-- Simple Path Visual -->
+            <div class="path-container">
+                <svg class="simple-path" viewBox="0 0 1200 400" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Simple curved path -->
+                    <path d="M50 200 Q300 100 600 200 T1150 200" 
+                          stroke="#87A96B" 
+                          stroke-width="3" 
+                          fill="none" 
+                          stroke-dasharray="10 5"
+                          opacity="0.4"/>
+                </svg>
+                
+                <!-- Info Cards Along Path -->
+                <div class="info-stops">
+                    
+                    <!-- Stop 1: Find Your Buddy -->
+                    <div class="info-stop" style="left: 8%; top: 45%;">
+                        <div class="stop-dot"></div>
+                        <div class="info-card">
+                            <span class="card-number">01</span>
+                            <h3>Find Your Buddy</h3>
+                            <p>Connect with others who understand. No judgment, just support and communication on your journey.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Stop 2: What We Do -->
+                    <div class="info-stop" style="left: 33%; top: 20%;">
+                        <div class="stop-dot"></div>
+                        <div class="info-card">
+                            <span class="card-number">02</span>
+                            <h3>What We Do</h3>
+                            <p>Simple walks, meaningful conversations, and mindful moments. We walk, we talk, we communicate and heal together.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Stop 3: Why We Walk -->
+                    <div class="info-stop" style="left: 58%; top: 40%;">
+                        <div class="stop-dot"></div>
+                        <div class="info-card">
+                            <span class="card-number">03</span>
+                            <h3>Why We Walk</h3>
+                            <p>Mental health matters. Walking reduces stress, communication heals, and talking helps. Together, we raise awareness and support each other.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Stop 4: Questions & Environment -->
+                    <div class="info-stop" style="left: 83%; top: 20%;">
+                        <div class="stop-dot"></div>
+                        <div class="info-card">
+                            <span class="card-number">04</span>
+                            <h3>Conversation Starters</h3>
+                            <p>Open conversations about wellness and life. Share your story, listen to others, and grow together.</p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <!-- Environmental Awareness -->
+            <div class="environment-section">
+                <div class="env-content">
+                    <h3>Community Awareness</h3>
+                    <p>As we heal ourselves, we strengthen our community. Building connections, fostering understanding, and creating positive change together.</p>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Expected Outcomes Section -->
+    <section class="expected-outcomes" id="outcomes">
+        <div class="container">
+            <div class="outcomes-header">
+                <h2>Expected Outcomes</h2>
+                <p class="section-subtitle">What We Aim to Achieve Together</p>
+            </div>
+            
+            <div class="outcomes-grid">
+                <div class="outcome-card">
+                    <div class="outcome-number">01</div>
+                    <h3>Mental Health</h3>
+                    <p class="outcome-text">Walking reduces anxiety and depression by 30%, while building emotional resilience through mindful movement and peer support.</p>
+                    <div class="outcome-metrics">
+                        <span class="metric">30% less anxiety</span>
+                        <span class="metric">Better sleep</span>
+                        <span class="metric">Mood boost</span>
+                    </div>
+                </div>
+                
+                <div class="outcome-card">
+                    <div class="outcome-number">02</div>
+                    <h3>Social Connection</h3>
+                    <p class="outcome-text">Create meaningful friendships and support networks that increase social well-being by 40% through shared experiences and open conversations.</p>
+                    <div class="outcome-metrics">
+                        <span class="metric">New friendships</span>
+                        <span class="metric">Support network</span>
+                        <span class="metric">Less isolation</span>
+                    </div>
+                </div>
+                
+                <div class="outcome-card">
+                    <div class="outcome-number">03</div>
+                    <h3>Social Impact</h3>
+                    <p class="outcome-text">Build stronger social connections while fostering awareness and understanding in our community.</p>
+                    <div class="outcome-metrics">
+                        <span class="metric">Community bonds</span>
+                        <span class="metric">Eco-awareness</span>
+                        <span class="metric">Green habits</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="project-goals">
+                <div class="goals-header">
+                    <span class="goals-number">2025</span>
+                    <h3>Our Path Forward</h3>
+                    <p class="goals-subtitle">Milestones we're working towards together</p>
+                </div>
+                
+                <div class="path-container">
+                    <div class="trail-path">
+                        <svg viewBox="0 0 1000 120" preserveAspectRatio="none" class="path-svg">
+                            <defs>
+                                <pattern id="dots" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+                                    <circle cx="2" cy="2" r="1" fill="#D0D0D0"/>
+                                </pattern>
+                            </defs>
+                            <path d="M 0 60 Q 250 40 500 60 T 1000 60" stroke="url(#dots)" stroke-width="40" fill="none" opacity="0.3"/>
+                            <path d="M 0 60 Q 250 40 500 60 T 1000 60" stroke="#81C784" stroke-width="3" fill="none" stroke-dasharray="5,10" opacity="0.2"/>
+                        </svg>
+                    </div>
+                    
+                    <div class="milestone-grid">
+                        <div class="milestone">
+                            <div class="milestone-marker">
+                                <div class="marker-ring"></div>
+                                <div class="marker-dot"></div>
+                            </div>
+                            <div class="milestone-info">
+                                <div class="milestone-value">100+</div>
+                                <div class="milestone-label">Community Members</div>
+                            </div>
+                        </div>
+                        
+                        <div class="milestone">
+                            <div class="milestone-marker">
+                                <div class="marker-ring"></div>
+                                <div class="marker-dot"></div>
+                            </div>
+                            <div class="milestone-info">
+                                <div class="milestone-value">80%</div>
+                                <div class="milestone-label">Feel Better</div>
+                            </div>
+                        </div>
+                        
+                        <div class="milestone">
+                            <div class="milestone-marker">
+                                <div class="marker-ring"></div>
+                                <div class="marker-dot"></div>
+                            </div>
+                            <div class="milestone-info">
+                                <div class="milestone-value">50</div>
+                                <div class="milestone-label">Nature Walks</div>
+                            </div>
+                        </div>
+                        
+                        <div class="milestone">
+                            <div class="milestone-marker">
+                                <div class="marker-ring"></div>
+                                <div class="marker-dot"></div>
+                            </div>
+                            <div class="milestone-info">
+                                <div class="milestone-value">500+</div>
+                                <div class="milestone-label">Stories Shared</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section - Community Style -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-header">
+                <h2>Our Story & Mission</h2>
+                <p class="section-subtitle">Started with a walk, grew into a movement</p>
+            </div>
+            
+            <div class="about-content">
+                <!-- Why We Walk - Main Focus -->
+                <div class="why-we-walk-section">
+                    <div class="why-card">
+                        <h3>Why We Walk</h3>
+                        <p>Mental health doesn't have to be scary or lonely. We believe in the power of communication + community = healing. Simple as that!</p>
+                        <div class="values-list">
+                            <span class="value">✓ No judgment</span>
+                            <span class="value">✓ All welcome</span>
+                            <span class="value">✓ Supportive</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- The Ripple Effect - Desktop -->
+                <div class="ripple-section">
+                    <h3>The Ripple Effect</h3>
+                    <div class="ripple-container">
+                        <!-- Central Point -->
+                        <div class="ripple-center">
+                            <span>You</span>
+                        </div>
+                        
+                        <!-- Ripple Rings -->
+                        <div class="ripple-ring ring-1"></div>
+                        <div class="ripple-ring ring-2"></div>
+                        <div class="ripple-ring ring-3"></div>
+                        
+                        <!-- Impact Points -->
+                        <div class="impact-point point-1">
+                            <div class="point-content">
+                                <h4>Personal Healing</h4>
+                                <p>Your journey begins</p>
+                            </div>
+                        </div>
+                        
+                        <div class="impact-point point-2">
+                            <div class="point-content">
+                                <h4>Inspire Others</h4>
+                                <p>Friends & family join</p>
+                            </div>
+                        </div>
+                        
+                        <div class="impact-point point-3">
+                            <div class="point-content">
+                                <h4>Community Growth</h4>
+                                <p>Neighborhood transforms</p>
+                            </div>
+                        </div>
+                        
+                        <div class="impact-point point-4">
+                            <div class="point-content">
+                                <h4>Social Awareness</h4>
+                                <p>Community thrives</p>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="ripple-description">One person's healing creates waves of positive change</p>
+                </div>
+                
+                <!-- Simplified Mobile Version -->
+                <div class="ripple-section-mobile" style="display: none;">
+                    <h3>The Ripple Effect</h3>
+                    <p style="margin-bottom: 24px; color: var(--text-gray);">Your healing journey creates waves of positive change:</p>
+                    <ul class="impact-list">
+                        <li>You → Personal Healing</li>
+                        <li>Family → Inspire Others</li>
+                        <li>Community → Neighborhood Growth</li>
+                        <li>Society → Community Thrives</li>
+                    </ul>
+                    <p style="margin-top: 24px; font-style: italic; color: var(--text-gray); font-size: 0.9rem;">One step forward, endless impact</p>
+                </div>
+                
+                <div class="inspiration-quote">
+                    <blockquote>
+                        "Come for the walk, stay for the people, leave with hope" 
+                        <span class="quote-author">- Every walker ever</span>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- QR Code Section -->
+    <section class="qr-section">
+        <div class="container">
+            <div class="qr-container">
+                <div class="qr-content">
+                    <h3>Quick Access</h3>
+                    <p>Scan to connect with us instantly</p>
+                </div>
+                <div class="qr-code-wrapper">
+                    <div class="qr-code-placeholder" id="qrcode">
+                        <!-- QR code will be generated here -->
+                        <div class="qr-placeholder-content">
+                            <svg width="180" height="180" viewBox="0 0 180 180" xmlns="http://www.w3.org/2000/svg">
+                                <!-- QR Code Pattern Placeholder -->
+                                <rect width="180" height="180" fill="#ffffff" rx="8"/>
+                                <g fill="#2D5F3F">
+                                    <!-- Corner squares -->
+                                    <rect x="20" y="20" width="50" height="50" fill="none" stroke="#2D5F3F" stroke-width="6"/>
+                                    <rect x="28" y="28" width="34" height="34"/>
+                                    
+                                    <rect x="110" y="20" width="50" height="50" fill="none" stroke="#2D5F3F" stroke-width="6"/>
+                                    <rect x="118" y="28" width="34" height="34"/>
+                                    
+                                    <rect x="20" y="110" width="50" height="50" fill="none" stroke="#2D5F3F" stroke-width="6"/>
+                                    <rect x="28" y="118" width="34" height="34"/>
+                                    
+                                    <!-- Center pattern placeholder -->
+                                    <rect x="82" y="82" width="16" height="16"/>
+                                    <rect x="65" y="86" width="8" height="8"/>
+                                    <rect x="107" y="86" width="8" height="8"/>
+                                    <rect x="86" y="65" width="8" height="8"/>
+                                    <rect x="86" y="107" width="8" height="8"/>
+                                    
+                                    <!-- Decorative pattern dots -->
+                                    <circle cx="90" cy="45" r="2.5"/>
+                                    <circle cx="45" cy="90" r="2.5"/>
+                                    <circle cx="135" cy="90" r="2.5"/>
+                                    <circle cx="90" cy="135" r="2.5"/>
+                                </g>
+                            </svg>
+                            <div class="qr-overlay-text">Awaiting PDF Link</div>
+                        </div>
+                    </div>
+                    <div class="pdf-download-link" style="margin-top: 1rem; text-align: center;">
+                        <a href="#" id="pdf-link" class="download-btn" style="display: inline-block; padding: 0.5rem 1rem; background: var(--primary-green); color: white; text-decoration: none; border-radius: 20px; font-size: 0.9rem; transition: all 0.3s ease;">
+                            📄 Direct Download
+                        </a>
+                    </div>
+                    <div class="qr-decoration">
+                        <span class="leaf-icon">🌿</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">Walk & Talk</div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Walk & Talk. A Mental Health Awareness Week Initiative.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+        
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+        
+        // Parallax effect for hero (removed to fix overlap issue)
+        // Only fade hero content, don't move the hero section
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const heroContent = document.querySelector('.hero-content');
+            
+            if (heroContent && scrolled < window.innerHeight) {
+                heroContent.style.opacity = 1 - (scrolled / 800);
+            }
+        });
+        
+        // Form submission handler
+        function handleSubmit(event) {
+            event.preventDefault();
+            
+            const form = event.target;
+            const submitBtn = form.querySelector('.submit-btn');
+            const originalText = submitBtn.textContent;
+            
+            // Show loading state
+            submitBtn.textContent = 'Submitting...';
+            submitBtn.disabled = true;
+            
+            // Simulate form submission
+            setTimeout(() => {
+                // Reset form
+                form.reset();
+                
+                // Show success message
+                submitBtn.textContent = '✓ Registration Complete!';
+                submitBtn.style.background = 'var(--sage-green)';
+                
+                // Reset button after 3 seconds
+                setTimeout(() => {
+                    submitBtn.textContent = originalText;
+                    submitBtn.disabled = false;
+                    submitBtn.style.background = '';
+                }, 3000);
+                
+                // Show alert (in real app, show better notification)
+                alert('Thank you for registering! We\'ll send you event details soon.');
+            }, 1500);
+        }
+    </script>
+    
+    <!-- QR Code Generation Script -->
+    <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+    <script>
+        // PDF Configuration
+        // For local testing: Uses relative path to Trifold.pdf
+        // For online deployment: Update with your hosted URL
+        
+        // CONFIGURATION
+        const PDF_URL = 'Trifold.pdf'; // Local file path
+        // For online deployment, replace with: 'https://yourdomain.com/Trifold.pdf'
+        
+        // Generate QR Code when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            // Check if URL is configured
+            if (PDF_URL) {
+                // Clear the placeholder
+                document.getElementById('qrcode').innerHTML = '';
+                
+                // Generate QR Code
+                new QRCode(document.getElementById("qrcode"), {
+                    text: PDF_URL,
+                    width: 180,
+                    height: 180,
+                    colorDark : "#2D5F3F", // Your forest green color
+                    colorLight : "#ffffff",
+                    correctLevel : QRCode.CorrectLevel.H
+                });
+                
+                // Update the download link
+                document.getElementById('pdf-link').href = PDF_URL;
+                document.getElementById('pdf-link').setAttribute('download', 'Trifold.pdf');
+            } else {
+                console.log('QR Code waiting for PDF URL configuration');
+                // Keep the placeholder visible
+            }
+        });
+        
+        // Add hover effect to download button
+        const downloadBtn = document.getElementById('pdf-link');
+        if (downloadBtn) {
+            downloadBtn.addEventListener('mouseenter', function() {
+                this.style.background = 'var(--sage-green)';
+                this.style.transform = 'scale(1.05)';
+            });
+            downloadBtn.addEventListener('mouseleave', function() {
+                this.style.background = 'var(--primary-green)';
+                this.style.transform = 'scale(1)';
+            });
+        }
+    </script>
+</body>
+</html>

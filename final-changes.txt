@@ -1,0 +1,12 @@
+Changes to implement:
+
+1. DONE: Minimalist Walk & Talk section with 4 info cards
+2. DONE: About section with only "Why We Walk" and animated Ripple Effect (4 cards)
+3. TODO: Replace "Happy Walker Stories" testimonials with "Expected Outcomes" section
+4. TODO: Remove entire "Yes! Save My Spot" registration section
+
+The Expected Outcomes section should have:
+- Research-backed benefits
+- Measurable goals
+- No fake testimonials since project hasn't started yet
+- Focus on what the project aims to achieve

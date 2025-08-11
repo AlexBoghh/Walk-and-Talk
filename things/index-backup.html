@@ -1,0 +1,3039 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Walk & Talk - Free Mental Health Nature Walk | Aug 16, Shah Alam</title>
+    <meta name="description" content="Join our free healing community walk for Mental Health Awareness Week. Nature meets wellness at Shah Alam Forest Trail. Register now - completely free, all ages welcome.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Simple Leaf Animation -->
+    <link rel="stylesheet" href="simple-leaves.css">
+    
+    <style>
+        :root {
+            /* Modern Green Nature Palette */
+            --primary-green: #2D5F3F;
+            --sage-green: #87A96B;
+            --mint-green: #98FF98;
+            --forest-dark: #1B3B2F;
+            --leaf-light: #E8F5E8;
+            
+            /* Supporting Colors */
+            --cream: #FFF8F3;
+            --white: #FFFFFF;
+            --text-dark: #1A1A1A;
+            --text-gray: #6B7280;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 0;
+            transition: all 0.3s ease;
+        }
+        
+        .navbar.scrolled {
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-green);
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary-green);
+        }
+        
+        .nav-cta {
+            background: var(--primary-green);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .nav-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(45, 95, 63, 0.3);
+        }
+        
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, #E8F5E8 0%, #FFF8F3 50%, #FFFFFF 100%);
+            padding-top: 80px;
+        }
+        
+        /* Background Pattern */
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(135, 169, 107, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(45, 95, 63, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 40% 60%, rgba(152, 255, 152, 0.08) 0%, transparent 50%);
+            z-index: 0;
+        }
+        
+        /* Leaf animations are now in simple-leaves.css for smooth, gentle falling */
+        
+        /* Hero Section */
+        
+        /* Hero Content */
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            position: relative;
+            z-index: 2;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        
+        .hero-content {
+            animation: fadeInUp 1s ease-out;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .hero-badge {
+            display: inline-block;
+            background: var(--leaf-light);
+            color: var(--primary-green);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+        
+        h1 {
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            line-height: 1.1;
+            color: var(--forest-dark);
+            margin-bottom: 1.5rem;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, var(--primary-green), var(--sage-green));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hero-description {
+            font-size: 1.25rem;
+            color: var(--text-gray);
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+        
+        .btn-primary {
+            background: var(--primary-green);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.125rem;
+            transition: all 0.3s ease;
+            display: inline-block;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 20px 40px rgba(45, 95, 63, 0.3);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: var(--primary-green);
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.125rem;
+            transition: all 0.3s ease;
+            display: inline-block;
+            border: 2px solid var(--primary-green);
+            cursor: pointer;
+        }
+        
+        .btn-secondary:hover {
+            background: var(--primary-green);
+            color: white;
+            transform: translateY(-3px);
+        }
+        
+        /* Hero Stats */
+        .hero-stats {
+            display: flex;
+            gap: 3rem;
+        }
+        
+        .stat {
+            text-align: left;
+        }
+        
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-green);
+            display: block;
+        }
+        
+        .stat-label {
+            font-size: 0.875rem;
+            color: var(--text-gray);
+        }
+        
+        /* Hero Visual */
+        .hero-visual {
+            position: relative;
+            animation: fadeInUp 1s ease-out 0.3s both;
+        }
+        
+        .nature-illustration {
+            width: 100%;
+            height: auto;
+            position: relative;
+            z-index: 1;
+        }
+        
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        /* Section Spacing */
+        section {
+            padding: 5rem 0;
+        }
+        
+        h2 {
+            font-size: 2.5rem;
+            color: var(--forest-dark);
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        
+        /* Event Details Section - Community Focused */
+        .event-details {
+            background: linear-gradient(180deg, #FFFFFF 0%, #FFF8F3 50%, #F0FFF4 100%);
+            padding: 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .event-details::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(152, 255, 152, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+        
+        /* Friendly Header */
+        .event-header {
+            text-align: center;
+            margin-bottom: 60px;
+            position: relative;
+        }
+        
+        .event-emoji {
+            font-size: 3rem;
+            display: block;
+            margin-bottom: 16px;
+        }
+        
+        .header-label {
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: var(--sage-green);
+            background: var(--leaf-light);
+            padding: 6px 16px;
+            border-radius: 20px;
+            display: inline-block;
+            margin-bottom: 16px;
+        }
+        
+        .header-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--forest-dark);
+            margin-bottom: 12px;
+            line-height: 1.3;
+        }
+        
+        .header-date {
+            display: block;
+            font-size: 1.5rem;
+            color: var(--primary-green);
+            font-weight: 500;
+            margin-top: 8px;
+        }
+        
+        .header-description {
+            font-size: 1.25rem;
+            color: var(--text-gray);
+            margin: 0;
+            font-weight: 400;
+        }
+        
+        /* Main Event Cards */
+        .event-main-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-bottom: 60px;
+        }
+        
+        .event-card {
+            background: white;
+            border-radius: 20px;
+            padding: 28px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        
+        .event-card:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 12px 40px rgba(45, 95, 63, 0.12);
+            border-color: var(--mint-green);
+        }
+        
+        .card-emoji {
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+            display: block;
+        }
+        
+        .event-card h3 {
+            font-size: 1.25rem;
+            color: var(--forest-dark);
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+        
+        .card-pattern {
+            position: absolute;
+            bottom: -20px;
+            right: -20px;
+            width: 100px;
+            height: 100px;
+            background: radial-gradient(circle, var(--leaf-light) 20%, transparent 20%);
+            background-size: 15px 15px;
+            opacity: 0.5;
+            transform: rotate(45deg);
+        }
+        
+        /* When Card */
+        .time-display {
+            margin: 16px 0;
+        }
+        
+        .time-big {
+            display: block;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-green);
+            margin-bottom: 4px;
+        }
+        
+        .time-duration {
+            font-size: 0.95rem;
+            color: var(--sage-green);
+            font-weight: 500;
+        }
+        
+        .card-note {
+            font-size: 0.875rem;
+            color: var(--text-gray);
+            margin-top: 8px;
+            font-style: italic;
+        }
+        
+        /* Where Card */
+        .location-desc {
+            color: var(--text-gray);
+            margin-bottom: 16px;
+            font-size: 0.95rem;
+        }
+        
+        .map-btn {
+            background: var(--leaf-light);
+            color: var(--primary-green);
+            border: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        
+        .map-btn:hover {
+            background: var(--primary-green);
+            color: white;
+            transform: scale(1.05);
+        }
+        
+        /* Who Card */
+        .welcome-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin: 16px 0;
+        }
+        
+        .tag {
+            background: linear-gradient(135deg, #E8F5E8, #F0FFF4);
+            color: var(--primary-green);
+            padding: 6px 12px;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+        
+        /* Journey Timeline */
+        .journey-section {
+            margin-bottom: 48px;
+        }
+        
+        .journey-title {
+            font-size: 1.75rem;
+            color: var(--forest-dark);
+            margin-bottom: 32px;
+            text-align: center;
+            font-weight: 600;
+        }
+        
+        .journey-timeline {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+            position: relative;
+        }
+        
+        .journey-timeline::before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            left: 5%;
+            right: 5%;
+            height: 2px;
+            background: linear-gradient(90deg, var(--sage-green), var(--mint-green));
+            z-index: 0;
+        }
+        
+        .timeline-item {
+            position: relative;
+            text-align: center;
+        }
+        
+        .timeline-dot {
+            width: 40px;
+            height: 40px;
+            background: white;
+            border: 3px solid var(--sage-green);
+            border-radius: 50%;
+            margin: 0 auto 16px;
+            position: relative;
+            z-index: 1;
+            transition: all 0.3s ease;
+        }
+        
+        .timeline-item:hover .timeline-dot {
+            background: var(--sage-green);
+            transform: scale(1.2);
+        }
+        
+        .timeline-content {
+            background: white;
+            padding: 16px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+        
+        .timeline-time {
+            display: block;
+            font-size: 0.75rem;
+            color: var(--primary-green);
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+        
+        .timeline-content h4 {
+            font-size: 1rem;
+            color: var(--forest-dark);
+            margin: 0 0 4px 0;
+            font-weight: 600;
+        }
+        
+        .timeline-content p {
+            font-size: 0.85rem;
+            color: var(--text-gray);
+            margin: 0;
+        }
+        
+        /* Community Features */
+        .community-features {
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+            margin-bottom: 48px;
+            flex-wrap: wrap;
+        }
+        
+        .feature {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 20px;
+            background: white;
+            border-radius: 30px;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .feature:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 20px rgba(45, 95, 63, 0.15);
+        }
+        
+        .feature-icon {
+            font-size: 1.5rem;
+        }
+        
+        .feature-text {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--forest-dark);
+        }
+        
+        /* Join Section */
+        .join-section {
+            background: linear-gradient(135deg, #FFE4E1 0%, #E8F5E8 100%);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .join-section::before {
+            content: '🌿';
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            font-size: 100px;
+            opacity: 0.1;
+            transform: rotate(-15deg);
+        }
+        
+        .join-content {
+            margin-bottom: 24px;
+        }
+        
+        .join-avatars {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 16px;
+        }
+        
+        .avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 600;
+            font-size: 0.875rem;
+            border: 3px solid white;
+            margin-left: -12px;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        
+        .avatar:first-child {
+            margin-left: 0;
+        }
+        
+        .avatar:hover {
+            transform: scale(1.1) translateY(-5px);
+            z-index: 10;
+        }
+        
+        .join-text {
+            font-size: 1.125rem;
+            color: var(--forest-dark);
+            margin: 0;
+            font-weight: 500;
+        }
+        
+        .join-btn {
+            background: var(--primary-green);
+            color: white;
+            padding: 16px 40px;
+            border: none;
+            border-radius: 30px;
+            font-size: 1.125rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .join-btn:hover {
+            background: var(--forest-dark);
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(45, 95, 63, 0.3);
+        }
+        
+        .join-btn::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+        
+        .join-btn:active::after {
+            width: 300px;
+            height: 300px;
+        }
+        
+        /* Walk & Talk Info Section - Minimalist Style */
+        .walkinfo {
+            background: linear-gradient(180deg, #FFFFFF 0%, #F0FFF4 100%);
+            padding: 80px 0;
+            position: relative;
+        }
+        
+        .walkinfo-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .walkinfo-header h2 {
+            font-size: 2.5rem;
+            color: var(--forest-dark);
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+        
+        .header-subtitle {
+            font-size: 1.125rem;
+            color: var(--sage-green);
+            font-weight: 500;
+        }
+        
+        /* Park Scene Background */
+        .park-scene {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            pointer-events: none;
+            z-index: 1;
+        }
+        
+        .park-sky {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 40%;
+            background: linear-gradient(180deg, rgba(152, 255, 152, 0.1) 0%, transparent 100%);
+        }
+        
+        /* Trees scattered throughout */
+        .park-trees {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+        
+        .tree {
+            position: absolute;
+            width: 60px;
+            height: 120px;
+            opacity: 0.6;
+        }
+        
+        .tree::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 8px;
+            height: 50px;
+            background: var(--forest-dark);
+            border-radius: 4px;
+        }
+        
+        .tree::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 50px;
+            background: radial-gradient(circle, var(--sage-green) 30%, var(--mint-green) 70%);
+            border-radius: 50%;
+        }
+        
+        .tree-1 {
+            top: 15%;
+            left: 8%;
+            animation: treeWave 8s ease-in-out infinite;
+        }
+        
+        .tree-2 {
+            top: 25%;
+            right: 12%;
+            animation: treeWave 10s ease-in-out infinite 2s;
+        }
+        
+        .tree-3 {
+            top: 60%;
+            left: 5%;
+            animation: treeWave 12s ease-in-out infinite 4s;
+        }
+        
+        .tree-4 {
+            top: 50%;
+            right: 8%;
+            animation: treeWave 9s ease-in-out infinite 1s;
+        }
+        
+        .tree-5 {
+            top: 80%;
+            right: 25%;
+            animation: treeWave 11s ease-in-out infinite 3s;
+        }
+        
+        @keyframes treeWave {
+            0%, 100% { transform: rotate(0deg) scale(1); }
+            50% { transform: rotate(2deg) scale(1.05); }
+        }
+        
+        /* Enhanced Benefit Stops Styling */
+        .benefit-stop {
+            position: absolute;
+            z-index: 10;
+            transition: all 0.3s ease;
+        }
+        
+        .stop-marker {
+            width: 80px;
+            height: 80px;
+            position: relative;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        
+        .stop-marker:hover {
+            transform: scale(1.2) rotate(5deg);
+        }
+        
+        .marker-ring {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80px;
+            height: 80px;
+            border: 4px solid var(--primary-green);
+            border-radius: 50%;
+            background: white;
+            box-shadow: 0 4px 20px rgba(45, 95, 63, 0.3);
+            animation: pulseRing 2s ease-out infinite;
+        }
+        
+        @keyframes pulseRing {
+            0% {
+                box-shadow: 0 0 0 0 rgba(152, 255, 152, 0.6);
+            }
+            70% {
+                box-shadow: 0 0 0 25px rgba(152, 255, 152, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(152, 255, 152, 0);
+            }
+        }
+        
+        .marker-center {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 65px;
+            height: 65px;
+            background: linear-gradient(135deg, #E8F5E8, white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2;
+        }
+        
+        .stop-icon {
+            font-size: 2.2rem;
+            animation: bobIcon 3s ease-in-out infinite;
+        }
+        
+        @keyframes bobIcon {
+            0%, 100% { transform: translateY(0) scale(1); }
+            50% { transform: translateY(-5px) scale(1.1); }
+        }
+        
+        /* Enhanced Benefit Content Cards */
+        .benefit-content {
+            position: absolute;
+            top: 100px;
+            left: 50%;
+            transform: translateX(-50%) scale(0.9);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            z-index: 20;
+        }
+        
+        .benefit-stop:hover .benefit-content {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(-50%) scale(1);
+            top: 90px;
+        }
+        
+        .content-card {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.98), rgba(232, 245, 232, 0.95));
+            backdrop-filter: blur(15px);
+            border-radius: 24px;
+            padding: 28px;
+            width: 320px;
+            box-shadow: 0 15px 50px rgba(45, 95, 63, 0.15);
+            border: 3px solid transparent;
+            background-clip: padding-box;
+            position: relative;
+        }
+        
+        .content-card::before {
+            content: '';
+            position: absolute;
+            top: -3px;
+            left: -3px;
+            right: -3px;
+            bottom: -3px;
+            background: linear-gradient(135deg, var(--mint-green), var(--sage-green));
+            border-radius: 24px;
+            z-index: -1;
+        }
+        
+        .content-card h4 {
+            font-size: 1.35rem;
+            color: var(--forest-dark);
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+        
+        .content-card p {
+            font-size: 1rem;
+            color: var(--text-gray);
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+        
+        .benefit-details {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .benefit-tag {
+            background: linear-gradient(135deg, var(--leaf-light), #E8FFF0);
+            color: var(--primary-green);
+            padding: 8px 16px;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            box-shadow: 0 2px 10px rgba(152, 255, 152, 0.3);
+        }
+        
+        .step-number {
+            font-size: 0.9rem;
+            color: var(--sage-green);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        /* Journey Destination Enhanced */
+        .journey-end {
+            position: absolute;
+            z-index: 12;
+        }
+        
+        .destination-marker {
+            width: 100px;
+            height: 100px;
+            position: relative;
+            animation: floatDestination 4s ease-in-out infinite;
+        }
+        
+        @keyframes floatDestination {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .destination-ring {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100px;
+            height: 100px;
+            border: 5px solid var(--primary-green);
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--mint-green), var(--sage-green));
+            box-shadow: 0 8px 30px rgba(45, 95, 63, 0.4);
+            animation: destinationGlow 2s ease-in-out infinite;
+        }
+        
+        @keyframes destinationGlow {
+            0%, 100% { 
+                box-shadow: 0 8px 30px rgba(45, 95, 63, 0.4);
+                transform: translate(-50%, -50%) scale(1);
+            }
+            50% { 
+                box-shadow: 0 12px 40px rgba(152, 255, 152, 0.6);
+                transform: translate(-50%, -50%) scale(1.05);
+            }
+        }
+        
+        .destination-center {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80px;
+            height: 80px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2;
+        }
+        
+        .destination-icon {
+            font-size: 3rem;
+            animation: sparkleIcon 3s ease-in-out infinite;
+        }
+        
+        @keyframes sparkleIcon {
+            0%, 100% { 
+                transform: rotate(0deg) scale(1);
+                filter: brightness(1);
+            }
+            25% { transform: rotate(10deg) scale(1.1); }
+            50% { 
+                transform: rotate(-10deg) scale(1.2);
+                filter: brightness(1.3);
+            }
+            75% { transform: rotate(5deg) scale(1.1); }
+        }
+        
+        .destination-text {
+            position: absolute;
+            top: 120px;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            white-space: nowrap;
+        }
+        
+        .destination-text h4 {
+            font-size: 1.25rem;
+            color: var(--forest-dark);
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+        
+        .destination-text p {
+            font-size: 0.95rem;
+            color: var(--sage-green);
+            font-weight: 500;
+        }
+        
+        /* Path CTA Enhanced */
+        .benefits-cta {
+            position: relative;
+            z-index: 15;
+            text-align: center;
+            padding: 60px 20px 40px;
+            margin-top: 100px;
+        }
+        
+        .cta-content h3 {
+            font-size: 2rem;
+            color: var(--forest-dark);
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+        
+        .cta-content p {
+            font-size: 1.25rem;
+            color: var(--text-gray);
+            margin-bottom: 32px;
+        }
+        
+        .path-cta-btn {
+            background: linear-gradient(135deg, var(--primary-green), var(--sage-green));
+            color: white;
+            padding: 18px 40px;
+            border-radius: 35px;
+            border: none;
+            font-weight: 700;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            text-decoration: none;
+            display: inline-block;
+            box-shadow: 0 6px 25px rgba(45, 95, 63, 0.3);
+        }
+        
+        .path-cta-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+            transition: left 0.7s ease;
+        }
+        
+        .path-cta-btn:hover {
+            transform: translateY(-4px) scale(1.05);
+            box-shadow: 0 12px 35px rgba(45, 95, 63, 0.4);
+        }
+        
+        .path-cta-btn:hover::before {
+            left: 100%;
+        }
+        
+        /* Floating Leaves */
+        .floating-leaves {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+        
+        .floating-leaf {
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            background: var(--sage-green);
+            border-radius: 0 100% 0 100%;
+            animation: floatLeaf 15s ease-in-out infinite;
+        }
+        
+        .leaf-1 {
+            top: 20%;
+            left: 20%;
+            animation-delay: 0s;
+        }
+        
+        .leaf-2 {
+            top: 40%;
+            right: 30%;
+            animation-delay: 5s;
+        }
+        
+        .leaf-3 {
+            top: 70%;
+            left: 70%;
+            animation-delay: 10s;
+        }
+        
+        @keyframes floatLeaf {
+            0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 0.7; }
+            25% { transform: translateY(-20px) rotate(90deg); opacity: 1; }
+            50% { transform: translateY(-10px) rotate(180deg); opacity: 0.8; }
+            75% { transform: translateY(-30px) rotate(270deg); opacity: 0.9; }
+        }
+        
+        /* Birds */
+        .birds {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+        
+        .bird {
+            position: absolute;
+            width: 20px;
+            height: 10px;
+        }
+        
+        .bird::before,
+        .bird::after {
+            content: '';
+            position: absolute;
+            background: var(--forest-dark);
+            height: 2px;
+            border-radius: 2px;
+        }
+        
+        .bird::before {
+            width: 12px;
+            left: 0;
+            transform: rotate(-20deg);
+        }
+        
+        .bird::after {
+            width: 12px;
+            right: 0;
+            transform: rotate(20deg);
+        }
+        
+        .bird-1 {
+            top: 15%;
+            left: 30%;
+            animation: birdFly 20s linear infinite;
+        }
+        
+        .bird-2 {
+            top: 25%;
+            right: 40%;
+            animation: birdFly 25s linear infinite 10s;
+        }
+        
+        @keyframes birdFly {
+            0% { transform: translateX(-100px) translateY(0px); }
+            50% { transform: translateX(calc(100vw + 100px)) translateY(-20px); }
+            100% { transform: translateX(-100px) translateY(0px); }
+        }
+        
+        /* Main Content */
+        .benefits .container {
+            position: relative;
+            z-index: 10;
+            padding: 80px 2rem;
+        }
+        
+        .benefits-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .path-intro {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .trail-marker {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--leaf-light), var(--mint-green));
+            color: var(--primary-green);
+            padding: 12px 24px;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 24px;
+            border: 2px solid rgba(45, 95, 63, 0.2);
+        }
+        
+        .benefits-header h2 {
+            font-size: 3rem;
+            color: var(--forest-dark);
+            margin-bottom: 16px;
+            line-height: 1.2;
+        }
+        
+        .section-subtitle {
+            font-size: 1.25rem;
+            color: var(--text-gray);
+            margin: 0;
+        }
+        
+        /* Path Journey */
+        .path-journey {
+            position: relative;
+            height: 600px;
+            margin: 60px 0;
+        }
+        
+        .walking-path {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+        }
+        
+        .main-path {
+            animation: pathGlow 4s ease-in-out infinite;
+        }
+        
+        @keyframes pathGlow {
+            0%, 100% { filter: drop-shadow(0 0 5px rgba(135, 169, 107, 0.3)); }
+            50% { filter: drop-shadow(0 0 15px rgba(135, 169, 107, 0.6)); }
+        }
+        
+        /* Benefit Stops */
+        .benefit-stops {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 5;
+        }
+        
+        .benefit-stop {
+            position: absolute;
+            cursor: pointer;
+        }
+        
+        .stop-marker {
+            position: relative;
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 20px;
+            transition: all 0.3s ease;
+        }
+        
+        .marker-ring {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 4px solid var(--primary-green);
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            animation: pulseRing 3s ease-in-out infinite;
+        }
+        
+        .marker-center {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 40px;
+            height: 40px;
+            background: var(--primary-green);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            z-index: 1;
+        }
+        
+        @keyframes pulseRing {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.1); opacity: 0.8; }
+        }
+        
+        .benefit-content {
+            position: absolute;
+            top: 80px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 280px;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.4s ease;
+            z-index: 10;
+        }
+        
+        .benefit-stop:hover .benefit-content {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(-50%) translateY(-10px);
+        }
+        
+        .benefit-stop:hover .stop-marker {
+            transform: scale(1.1);
+        }
+        
+        .content-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            padding: 24px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+            border: 2px solid rgba(152, 255, 152, 0.3);
+            text-align: center;
+        }
+        
+        .content-card h4 {
+            font-size: 1.25rem;
+            color: var(--forest-dark);
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+        
+        .content-card p {
+            font-size: 0.95rem;
+            color: var(--text-gray);
+            line-height: 1.6;
+            margin-bottom: 16px;
+        }
+        
+        .benefit-details {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 16px;
+        }
+        
+        .benefit-tag {
+            background: linear-gradient(135deg, var(--leaf-light), #E8FFF0);
+            color: var(--primary-green);
+            padding: 6px 12px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        
+        .step-number {
+            background: var(--primary-green);
+            color: white;
+            padding: 4px 8px;
+            border-radius: 10px;
+            font-size: 0.75rem;
+            font-weight: 700;
+        }
+        
+        /* Journey End */
+        .journey-end {
+            position: absolute;
+            text-align: center;
+        }
+        
+        .destination-marker {
+            position: relative;
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 16px;
+        }
+        
+        .destination-ring {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 4px solid var(--sage-green);
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            animation: destinationPulse 2s ease-in-out infinite;
+        }
+        
+        .destination-center {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--sage-green), var(--mint-green));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            animation: sparkle 3s ease-in-out infinite;
+        }
+        
+        @keyframes destinationPulse {
+            0%, 100% { transform: scale(1); box-shadow: 0 0 20px rgba(135, 169, 107, 0.3); }
+            50% { transform: scale(1.05); box-shadow: 0 0 30px rgba(135, 169, 107, 0.6); }
+        }
+        
+        @keyframes sparkle {
+            0%, 100% { transform: translate(-50%, -50%) rotate(0deg); }
+            50% { transform: translate(-50%, -50%) rotate(180deg); }
+        }
+        
+        .destination-text h4 {
+            color: var(--forest-dark);
+            font-size: 1.1rem;
+            margin-bottom: 4px;
+            font-weight: 600;
+        }
+        
+        .destination-text p {
+            color: var(--text-gray);
+            font-size: 0.9rem;
+            margin: 0;
+        }
+        
+        /* Benefits CTA */
+        .benefits-cta {
+            text-align: center;
+            margin-top: 60px;
+            position: relative;
+            z-index: 10;
+        }
+        
+        .cta-content {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(20px);
+            border-radius: 30px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            border: 2px solid rgba(152, 255, 152, 0.2);
+        }
+        
+        .cta-content h3 {
+            font-size: 1.75rem;
+            color: var(--forest-dark);
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+        
+        .cta-content p {
+            font-size: 1.125rem;
+            color: var(--text-gray);
+            margin-bottom: 24px;
+        }
+        
+        .path-cta-btn {
+            background: linear-gradient(135deg, var(--primary-green), var(--sage-green));
+            color: white;
+            padding: 16px 40px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.125rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .path-cta-btn:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 15px 40px rgba(45, 95, 63, 0.4);
+        }
+        
+        .path-cta-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.6s;
+        }
+        
+        .path-cta-btn:hover::before {
+            left: 100%;
+        }
+        
+        /* Testimonials Section - Community Style */
+        .testimonials {
+            background: #FAFBFC;
+            padding: 80px 0;
+        }
+        
+        .testimonials-header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 24px;
+            margin-bottom: 48px;
+        }
+        
+        .testimonial-card {
+            background: white;
+            padding: 32px;
+            border-radius: 20px;
+            position: relative;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+        }
+        
+        .testimonial-card.featured {
+            transform: scale(1.05);
+            box-shadow: 0 8px 30px rgba(45, 95, 63, 0.12);
+            border: 2px solid var(--mint-green);
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .quote-emoji {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 2rem;
+            opacity: 0.3;
+        }
+        
+        .testimonial-content {
+            margin-bottom: 24px;
+        }
+        
+        .testimonial-content p {
+            color: var(--text-dark);
+            line-height: 1.8;
+            font-size: 1rem;
+        }
+        
+        .testimonial-footer {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .author-avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 600;
+            font-size: 1rem;
+        }
+        
+        .author-info {
+            flex: 1;
+        }
+        
+        .author-info strong {
+            display: block;
+            color: var(--forest-dark);
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+        
+        .author-info span {
+            font-size: 0.875rem;
+            color: var(--text-gray);
+        }
+        
+        .author-badge {
+            background: linear-gradient(135deg, var(--leaf-light), #E8FFF0);
+            color: var(--primary-green);
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+        
+        .testimonials-stats {
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+        }
+        
+        .stat-bubble {
+            text-align: center;
+            padding: 20px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+            transition: all 0.3s ease;
+        }
+        
+        .stat-bubble:hover {
+            transform: scale(1.1);
+        }
+        
+        .stat-num {
+            display: block;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-green);
+            margin-bottom: 4px;
+        }
+        
+        .stat-text {
+            font-size: 0.875rem;
+            color: var(--text-gray);
+        }
+        
+        /* About Section - Community Style */
+        .about {
+            background: linear-gradient(180deg, #FFFFFF 0%, #F0FFF4 100%);
+            padding: 80px 0;
+        }
+        
+        .about-header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+        
+        .about-main {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin-bottom: 48px;
+        }
+        
+        .about-card {
+            background: white;
+            padding: 32px;
+            border-radius: 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .card-emoji {
+            font-size: 2.5rem;
+            display: block;
+            margin-bottom: 16px;
+        }
+        
+        .about-card h3 {
+            font-size: 1.5rem;
+            color: var(--forest-dark);
+            margin-bottom: 16px;
+        }
+        
+        .about-card p {
+            color: var(--text-gray);
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+        
+        .fun-fact {
+            background: linear-gradient(135deg, #FFE4E1, #FFF0F5);
+            padding: 16px;
+            border-radius: 12px;
+            font-size: 0.9rem;
+            color: var(--forest-dark);
+        }
+        
+        .fun-fact span {
+            font-weight: 600;
+            color: var(--primary-green);
+        }
+        
+        .values-list {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+        
+        .value {
+            background: var(--leaf-light);
+            color: var(--primary-green);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        
+        .impact-section {
+            margin-bottom: 48px;
+        }
+        
+        .impact-section h3 {
+            text-align: center;
+            font-size: 1.75rem;
+            color: var(--forest-dark);
+            margin-bottom: 32px;
+        }
+        
+        .impact-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+        
+        .impact-card {
+            text-align: center;
+            padding: 24px;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .impact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(45, 95, 63, 0.15);
+        }
+        
+        .impact-icon {
+            font-size: 2.5rem;
+            display: block;
+            margin-bottom: 12px;
+        }
+        
+        .impact-card h4 {
+            font-size: 1.125rem;
+            color: var(--forest-dark);
+            margin-bottom: 8px;
+        }
+        
+        .impact-card p {
+            font-size: 0.875rem;
+            color: var(--text-gray);
+        }
+        
+        .inspiration-quote {
+            background: linear-gradient(135deg, var(--leaf-light), #E8FFF0);
+            padding: 32px;
+            border-radius: 20px;
+            text-align: center;
+        }
+        
+        .inspiration-quote blockquote {
+            font-size: 1.5rem;
+            color: var(--forest-dark);
+            font-weight: 600;
+            line-height: 1.6;
+            margin: 0;
+        }
+        
+        .inspiration-quote .quote-author {
+            display: block;
+            margin-top: 16px;
+            font-size: 1rem;
+            color: var(--primary-green);
+            font-weight: normal;
+        }
+        
+        /* Registration Section - Community Style */
+        .registration {
+            background: #FAFBFC;
+            padding: 80px 0;
+        }
+        
+        .registration-content {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .form-header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+        
+        .form-subtitle {
+            font-size: 1.125rem;
+            color: var(--text-gray);
+            margin-top: 8px;
+        }
+        
+        .form-container {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 48px;
+            background: white;
+            padding: 48px;
+            border-radius: 24px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+        }
+        
+        .form-sidebar h3 {
+            font-size: 1.25rem;
+            color: var(--forest-dark);
+            margin-bottom: 24px;
+        }
+        
+        .process-steps {
+            margin-bottom: 32px;
+        }
+        
+        .step {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 16px;
+        }
+        
+        .step-num {
+            width: 32px;
+            height: 32px;
+            background: var(--primary-green);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        
+        .step p {
+            color: var(--text-gray);
+            font-size: 0.95rem;
+        }
+        
+        .guarantee {
+            background: linear-gradient(135deg, #E8F5E8, #F0FFF4);
+            padding: 20px;
+            border-radius: 16px;
+            display: flex;
+            gap: 12px;
+        }
+        
+        .guarantee-icon {
+            font-size: 1.5rem;
+        }
+        
+        .guarantee p {
+            font-size: 0.875rem;
+            color: var(--text-dark);
+            line-height: 1.5;
+        }
+        
+        .friendly-form {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .form-greeting {
+            background: linear-gradient(135deg, #FFE4E1, #FFF0F5);
+            padding: 16px;
+            border-radius: 12px;
+            text-align: center;
+        }
+        
+        .form-greeting p {
+            color: var(--forest-dark);
+            font-weight: 500;
+            margin: 0;
+        }
+        
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        
+        .form-label {
+            font-size: 0.95rem;
+            color: var(--forest-dark);
+            font-weight: 600;
+        }
+        
+        .name-inputs {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+        
+        .friendly-input,
+        .friendly-select {
+            padding: 12px 16px;
+            border: 2px solid #E5E7EB;
+            border-radius: 12px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            background: white;
+        }
+        
+        .friendly-input:focus,
+        .friendly-select:focus {
+            outline: none;
+            border-color: var(--primary-green);
+            box-shadow: 0 0 0 3px rgba(45, 95, 63, 0.1);
+        }
+        
+        .consent-box {
+            background: var(--leaf-light);
+            padding: 16px;
+            border-radius: 12px;
+        }
+        
+        .friendly-checkbox {
+            display: flex;
+            align-items: start;
+            gap: 12px;
+            cursor: pointer;
+        }
+        
+        .friendly-checkbox input {
+            width: 20px;
+            height: 20px;
+            margin-top: 2px;
+            cursor: pointer;
+        }
+        
+        .friendly-checkbox span {
+            font-size: 0.9rem;
+            color: var(--text-dark);
+            line-height: 1.5;
+        }
+        
+        .submit-button {
+            background: var(--primary-green);
+            color: white;
+            padding: 18px 40px;
+            border: none;
+            border-radius: 30px;
+            font-size: 1.125rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .submit-button:hover {
+            background: var(--forest-dark);
+            transform: scale(1.02);
+            box-shadow: 0 10px 30px rgba(45, 95, 63, 0.3);
+        }
+        
+        .form-footer {
+            text-align: center;
+            color: var(--text-gray);
+            font-size: 0.9rem;
+            margin: 0;
+        }
+        
+        /* Footer */
+        .footer {
+            background: var(--forest-dark);
+            color: white;
+            padding: 3rem 0 1.5rem;
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .footer-logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--mint-green);
+        }
+        
+        .footer-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: var(--mint-green);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 1.5rem;
+        }
+        
+        .footer-bottom p {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.95rem;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .hero-buttons {
+                justify-content: center;
+            }
+            
+            .hero-stats {
+                justify-content: center;
+            }
+            
+            .hero-visual {
+                margin-top: 2rem;
+                max-width: 400px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            
+            .event-main-cards {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .journey-timeline {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .journey-timeline::before {
+                display: none;
+            }
+            
+            .community-features {
+                gap: 12px;
+            }
+            
+            .feature {
+                flex: 1 1 45%;
+                min-width: 150px;
+                padding: 10px 16px;
+            }
+            
+            .header-title {
+                font-size: 1.75rem;
+            }
+            
+            .join-section {
+                padding: 24px;
+            }
+            
+            .join-avatars {
+                transform: scale(0.9);
+            }
+            
+            /* Reduce leaves on mobile for performance */
+            .leaf-3, .leaf-4, .leaf-5 {
+                display: none;
+            }
+            
+            /* Benefits Path Mobile Adjustments */
+            .benefits-header h2 {
+                font-size: 2rem;
+            }
+            
+            .trail-marker {
+                font-size: 0.9rem;
+                padding: 10px 20px;
+            }
+            
+            .path-journey {
+                height: 500px;
+                margin: 40px 0;
+            }
+            
+            .benefit-stop {
+                position: relative !important;
+                left: auto !important;
+                right: auto !important;
+                top: auto !important;
+                margin: 30px auto;
+                display: block;
+                text-align: center;
+            }
+            
+            .benefit-stops {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 40px;
+                padding: 40px 0;
+            }
+            
+            .walking-path {
+                display: none; /* Hide complex path on mobile */
+            }
+            
+            .benefit-content {
+                position: relative !important;
+                top: auto !important;
+                left: auto !important;
+                transform: none !important;
+                width: 100% !important;
+                max-width: 300px;
+                opacity: 1 !important;
+                visibility: visible !important;
+                margin: 0 auto;
+            }
+            
+            .journey-end {
+                position: relative !important;
+                right: auto !important;
+                top: auto !important;
+                margin: 40px auto 0;
+            }
+            
+            .cta-content {
+                padding: 30px 20px;
+                margin: 0 20px;
+            }
+            
+            .cta-content h3 {
+                font-size: 1.5rem;
+            }
+            
+            .path-cta-btn {
+                padding: 14px 30px;
+                font-size: 1rem;
+            }
+            
+            /* Hide complex animations on mobile for better performance */
+            .park-scene,
+            .floating-leaves,
+            .birds {
+                display: none;
+            }
+            
+            .park-trees .tree-4,
+            .park-trees .tree-5 {
+                display: none;
+            }
+            
+            .benefits-grid,
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .testimonials-stats {
+                flex-direction: column;
+                gap: 16px;
+            }
+            
+            .about-main {
+                grid-template-columns: 1fr;
+            }
+            
+            .impact-cards {
+                grid-template-columns: 1fr;
+            }
+            
+            .form-container {
+                grid-template-columns: 1fr;
+                padding: 24px;
+            }
+            
+            .form-sidebar {
+                display: none;
+            }
+            
+            .name-inputs {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+                gap: 1.5rem;
+                text-align: center;
+            }
+            
+            .footer-links {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            h2 {
+                font-size: 2rem;
+            }
+            
+            section {
+                padding: 3rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Global Falling Leaves - Reduced for better performance -->
+    <div class="global-leaves" aria-hidden="true">
+        <div class="leaf-fall leaf-1"></div>
+        <div class="leaf-fall leaf-2"></div>
+        <div class="leaf-fall leaf-3"></div>
+        <div class="leaf-fall leaf-4"></div>
+        <div class="leaf-fall leaf-5"></div>
+    </div>
+    
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">Walk & Talk</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#benefits">Benefits</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <a href="#register" class="nav-cta">Join Walk</a>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-container">
+            <div class="hero-content">
+                <span class="hero-badge">Mental Health Awareness Week</span>
+                <h1>
+                    Find Your Peace<br>
+                    <span class="gradient-text">One Step at a Time</span>
+                </h1>
+                <p class="hero-description">
+                    Join our supportive community for therapeutic nature walks. 
+                    Experience the healing power of movement, nature, and connection.
+                </p>
+                
+                <div class="hero-buttons">
+                    <button class="btn-primary" onclick="document.getElementById('register').scrollIntoView()">
+                        Join Free Walk →
+                    </button>
+                    <button class="btn-secondary" onclick="document.getElementById('about').scrollIntoView()">
+                        Learn More
+                    </button>
+                </div>
+                
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">500+</span>
+                        <span class="stat-label">Happy Walkers</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">12</span>
+                        <span class="stat-label">Years Running</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Free Always</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero-visual">
+                <!-- Modern SVG Illustration -->
+                <svg class="nature-illustration" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Background Circle -->
+                    <circle cx="250" cy="250" r="240" fill="#E8F5E8" opacity="0.5"/>
+                    
+                    <!-- Trees -->
+                    <g class="trees">
+                        <!-- Tree 1 -->
+                        <rect x="150" y="250" width="20" height="100" fill="#2D5F3F"/>
+                        <circle cx="160" cy="240" r="40" fill="#87A96B" opacity="0.8"/>
+                        <circle cx="145" cy="230" r="30" fill="#98FF98" opacity="0.6"/>
+                        
+                        <!-- Tree 2 -->
+                        <rect x="250" y="270" width="25" height="80" fill="#2D5F3F"/>
+                        <circle cx="262" cy="260" r="50" fill="#87A96B" opacity="0.9"/>
+                        <circle cx="275" cy="250" r="35" fill="#98FF98" opacity="0.5"/>
+                        
+                        <!-- Tree 3 -->
+                        <rect x="330" y="260" width="18" height="90" fill="#2D5F3F"/>
+                        <circle cx="339" cy="250" r="35" fill="#87A96B" opacity="0.7"/>
+                    </g>
+                    
+                    <!-- Walking Path -->
+                    <path d="M50 400 Q250 350 450 400" stroke="#2D5F3F" stroke-width="3" fill="none" opacity="0.5"/>
+                    
+                    <!-- Walking Figures -->
+                    <g class="walkers">
+                        <g transform="translate(200, 370)">
+                            <circle cx="0" cy="0" r="8" fill="#2D5F3F"/>
+                            <rect x="-4" y="8" width="8" height="20" rx="2" fill="#2D5F3F"/>
+                        </g>
+                        <g transform="translate(250, 365)">
+                            <circle cx="0" cy="0" r="7" fill="#87A96B"/>
+                            <rect x="-3.5" y="7" width="7" height="18" rx="2" fill="#87A96B"/>
+                        </g>
+                        <g transform="translate(300, 370)">
+                            <circle cx="0" cy="0" r="7" fill="#2D5F3F" opacity="0.7"/>
+                            <rect x="-3.5" y="7" width="7" height="18" rx="2" fill="#2D5F3F" opacity="0.7"/>
+                        </g>
+                    </g>
+                    
+                    <!-- Birds -->
+                    <g class="birds">
+                        <path d="M100 100 Q105 95 110 100" stroke="#2D5F3F" stroke-width="2" fill="none"/>
+                        <path d="M120 110 Q125 105 130 110" stroke="#2D5F3F" stroke-width="2" fill="none"/>
+                        <path d="M85 105 Q90 100 95 105" stroke="#2D5F3F" stroke-width="1.5" fill="none"/>
+                    </g>
+                    
+                    <!-- Sun -->
+                    <circle cx="400" cy="80" r="30" fill="#FFE082" opacity="0.6"/>
+                </svg>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Event Details Section - Community Focused Design -->
+    <section class="event-details" id="event">
+        <div class="container">
+            <!-- Friendly Header -->
+            <div class="event-header">
+                <div class="header-label">Join Our Next Walk</div>
+                <h2 class="header-title">
+                    Saturday Morning Adventure
+                    <span class="header-date">August 16</span>
+                </h2>
+                <p class="header-description">Come as you are, leave feeling better</p>
+            </div>
+            
+            <!-- Main Event Cards -->
+            <div class="event-main-cards">
+                <!-- When Card -->
+                <div class="event-card when-card">
+                    <div class="card-content">
+                        <h3>Early Morning Magic</h3>
+                        <div class="time-display">
+                            <span class="time-big">8:00 AM</span>
+                            <span class="time-duration">3 relaxing hours</span>
+                        </div>
+                        <p class="card-note">Perfect time to start your weekend!</p>
+                    </div>
+                    <div class="card-pattern"></div>
+                </div>
+                
+                <!-- Where Card -->
+                <div class="event-card where-card">
+                    <div class="card-content">
+                        <h3>Shah Alam Forest</h3>
+                        <p class="location-desc">Beautiful community trail with shaded paths</p>
+                        <button class="map-btn">
+                            <span>See Meeting Point</span>
+                        </button>
+                    </div>
+                    <div class="card-pattern"></div>
+                </div>
+                
+                <!-- Who Card -->
+                <div class="event-card who-card">
+                    <div class="card-content">
+                        <h3>Everyone Welcome!</h3>
+                        <div class="welcome-tags">
+                            <span class="tag">First-timers</span>
+                            <span class="tag">All ages</span>
+                            <span class="tag">Any fitness</span>
+                        </div>
+                        <p class="card-note">No judgment, just support</p>
+                    </div>
+                    <div class="card-pattern"></div>
+                </div>
+            </div>
+            
+            <!-- Journey Timeline -->
+            <div class="journey-section">
+                <h3 class="journey-title">Your Morning Journey</h3>
+                <div class="journey-timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-time">8:00</span>
+                            <h4>Warm Welcome</h4>
+                            <p>Meet new friends over coffee ☕</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-time">8:15</span>
+                            <h4>Nature Walk</h4>
+                            <p>Easy pace, lots of chat & laughs</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-time">10:00</span>
+                            <h4>Mindful Moment</h4>
+                            <p>Optional sharing circle 💭</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-time">10:30</span>
+                            <h4>Snacks & Stories</h4>
+                            <p>Connect over healthy treats 🍎</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Community Features -->
+            <div class="community-features">
+                <div class="feature">
+                    <span class="feature-icon">💝</span>
+                    <span class="feature-text">Completely FREE</span>
+                </div>
+                <div class="feature">
+                    <span class="feature-text">25-30 friendly faces</span>
+                </div>
+                <div class="feature">
+                    <span class="feature-icon">🎒</span>
+                    <span class="feature-text">Just bring yourself</span>
+                </div>
+                <div class="feature">
+                    <span class="feature-icon">☂️</span>
+                    <span class="feature-text">Rain or shine!</span>
+                </div>
+            </div>
+            
+            <!-- Join CTA -->
+            <div class="join-section">
+                <div class="join-content">
+                    <div class="join-avatars">
+                        <div class="avatar" style="background: #FFB6C1">JM</div>
+                        <div class="avatar" style="background: #98D8C8">AT</div>
+                        <div class="avatar" style="background: #F7DC6F">RS</div>
+                        <div class="avatar" style="background: #BB8FCE">+22</div>
+                    </div>
+                    <p class="join-text">Join 25 others who've already signed up!</p>
+                </div>
+                <button class="join-btn" onclick="document.getElementById('register').scrollIntoView()">
+                    Save My Spot
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section - Park Path Journey -->
+    <section class="benefits" id="benefits">
+        <div class="benefits-park">
+            <!-- Park Scene Background -->
+            <div class="park-scene">
+                <!-- Sky Gradient -->
+                <div class="park-sky"></div>
+                
+                <!-- Trees scattered throughout -->
+                <div class="park-trees">
+                    <div class="tree tree-1"></div>
+                    <div class="tree tree-2"></div>
+                    <div class="tree tree-3"></div>
+                    <div class="tree tree-4"></div>
+                    <div class="tree tree-5"></div>
+                </div>
+                
+                <!-- Floating leaves -->
+                <div class="floating-leaves">
+                    <div class="floating-leaf leaf-1"></div>
+                    <div class="floating-leaf leaf-2"></div>
+                    <div class="floating-leaf leaf-3"></div>
+                </div>
+                
+                <!-- Birds -->
+                <div class="birds">
+                    <div class="bird bird-1"></div>
+                    <div class="bird bird-2"></div>
+                </div>
+            </div>
+            
+            <!-- Main Content -->
+            <div class="container">
+                <div class="benefits-header">
+                    <div class="path-intro">
+                        <span class="trail-marker">🌲 Trail Benefits 🌲</span>
+                        <h2>Why You'll Love Walking With Us</h2>
+                        <p class="section-subtitle">Follow the path to discover what awaits you</p>
+                    </div>
+                </div>
+                
+                <!-- The Winding Path Journey -->
+                <div class="path-journey">
+                    <!-- Enhanced SVG Walking Path -->
+                    <svg class="walking-path" viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+                        <!-- Animated Dashed Path -->
+                        <path 
+                            d="M100 650 Q300 550 500 600 T900 400 Q1050 350 1100 450" 
+                            stroke="url(#pathGradient)" 
+                            stroke-width="120" 
+                            fill="none" 
+                            stroke-linecap="round"
+                            class="main-path"
+                            stroke-dasharray="30 20"
+                            stroke-dashoffset="0"
+                        >
+                            <animate attributeName="stroke-dashoffset" from="0" to="-50" dur="10s" repeatCount="indefinite"/>
+                        </path>
+                        
+                        <!-- Path Gradient Definition -->
+                        <defs>
+                            <linearGradient id="pathGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                <stop offset="0%" style="stop-color:#87A96B;stop-opacity:0.7">
+                                    <animate attributeName="stop-opacity" values="0.7;0.9;0.7" dur="4s" repeatCount="indefinite"/>
+                                </stop>
+                                <stop offset="50%" style="stop-color:#98FF98;stop-opacity:0.5">
+                                    <animate attributeName="stop-opacity" values="0.5;0.7;0.5" dur="4s" repeatCount="indefinite"/>
+                                </stop>
+                                <stop offset="100%" style="stop-color:#2D5F3F;stop-opacity:0.6">
+                                    <animate attributeName="stop-opacity" values="0.6;0.8;0.6" dur="4s" repeatCount="indefinite"/>
+                                </stop>
+                            </linearGradient>
+                            
+                            <!-- Enhanced Path Texture with Pebbles -->
+                            <pattern id="pathTexture" patternUnits="userSpaceOnUse" width="30" height="30">
+                                <circle cx="5" cy="5" r="2" fill="rgba(45, 95, 63, 0.2)"/>
+                                <circle cx="15" cy="12" r="1.5" fill="rgba(135, 169, 107, 0.2)"/>
+                                <circle cx="25" cy="8" r="1.8" fill="rgba(45, 95, 63, 0.15)"/>
+                                <circle cx="10" cy="22" r="2.2" fill="rgba(152, 255, 152, 0.1)"/>
+                                <circle cx="20" cy="25" r="1.6" fill="rgba(45, 95, 63, 0.2)"/>
+                            </pattern>
+                        </defs>
+                        
+                        <!-- Path Texture Overlay -->
+                        <path 
+                            d="M100 650 Q300 550 500 600 T900 400 Q1050 350 1100 450" 
+                            stroke="url(#pathTexture)" 
+                            stroke-width="80" 
+                            fill="none" 
+                            stroke-linecap="round"
+                            opacity="0.8"
+                        />
+                        
+                        <!-- Footprints along the path -->
+                        <g class="footprints" opacity="0.3">
+                            <text x="150" y="630" font-size="20" fill="#2D5F3F" transform="rotate(-20 150 630)">👣</text>
+                            <text x="350" y="570" font-size="20" fill="#2D5F3F" transform="rotate(-10 350 570)">👣</text>
+                            <text x="550" y="590" font-size="20" fill="#2D5F3F" transform="rotate(10 550 590)">👣</text>
+                            <text x="750" y="480" font-size="20" fill="#2D5F3F" transform="rotate(-15 750 480)">👣</text>
+                            <text x="950" y="420" font-size="20" fill="#2D5F3F" transform="rotate(20 950 420)">👣</text>
+                        </g>
+                    </svg>
+                    
+                    <!-- Benefit Stops Along the Path -->
+                    <div class="benefit-stops">
+                        
+                        <!-- Stop 1: Feel Calmer -->
+                        <div class="benefit-stop stop-1" style="left: 15%; top: 70%;">
+                            <div class="stop-marker">
+                                <div class="marker-ring"></div>
+                                <div class="marker-center">
+                                    <span class="stop-icon">😌</span>
+                                </div>
+                            </div>
+                            <div class="benefit-content">
+                                <div class="content-card">
+                                    <h4>Feel Calmer & Lighter</h4>
+                                    <p>Watch your worries melt away as you walk. Nature + friends = instant mood boost!</p>
+                                    <div class="benefit-details">
+                                        <span class="benefit-tag">🍃 Stress Relief</span>
+                                        <span class="step-number">Step 1</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Stop 2: Make Friends -->
+                        <div class="benefit-stop stop-2" style="right: 35%; top: 45%;">
+                            <div class="stop-marker">
+                                <div class="marker-ring"></div>
+                                <div class="marker-center">
+                                    <span class="stop-icon">👯</span>
+                                </div>
+                            </div>
+                            <div class="benefit-content">
+                                <div class="content-card">
+                                    <h4>Make Real Friends</h4>
+                                    <p>No small talk, just genuine connections with people who get it. Your tribe awaits!</p>
+                                    <div class="benefit-details">
+                                        <span class="benefit-tag">🤝 Community</span>
+                                        <span class="step-number">Step 2</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Stop 3: Move & Feel Good -->
+                        <div class="benefit-stop stop-3" style="left: 45%; top: 55%;">
+                            <div class="stop-marker">
+                                <div class="marker-ring"></div>
+                                <div class="marker-center">
+                                    <span class="stop-icon">💪</span>
+                                </div>
+                            </div>
+                            <div class="benefit-content">
+                                <div class="content-card">
+                                    <h4>Move & Feel Good</h4>
+                                    <p>Easy exercise that doesn't feel like exercise. Just walking, talking, and feeling alive!</p>
+                                    <div class="benefit-details">
+                                        <span class="benefit-tag">🚶 Active Living</span>
+                                        <span class="step-number">Step 3</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Stop 4: Nature's Magic -->
+                        <div class="benefit-stop stop-4" style="right: 10%; top: 30%;">
+                            <div class="stop-marker">
+                                <div class="marker-ring"></div>
+                                <div class="marker-center">
+                                    <span class="stop-icon">🦋</span>
+                                </div>
+                            </div>
+                            <div class="benefit-content">
+                                <div class="content-card">
+                                    <h4>Nature's Magic</h4>
+                                    <p>Fresh air, bird songs, and green spaces. Mother Nature's free therapy session!</p>
+                                    <div class="benefit-details">
+                                        <span class="benefit-tag">🌿 Forest Therapy</span>
+                                        <span class="step-number">Step 4</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                    <!-- Path End - Journey Destination -->
+                    <div class="journey-end" style="right: 8%; top: 35%;">
+                        <div class="destination-marker">
+                            <div class="destination-ring"></div>
+                            <div class="destination-center">
+                                <span class="destination-icon">✨</span>
+                            </div>
+                        </div>
+                        <div class="destination-text">
+                            <h4>Your Journey Awaits!</h4>
+                            <p>Ready to start walking?</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Call to Action -->
+                <div class="benefits-cta">
+                    <div class="cta-content">
+                        <h3>Start Your Healing Journey Today</h3>
+                        <p>Join us and feel the difference from day one!</p>
+                        <button class="path-cta-btn" onclick="document.getElementById('register').scrollIntoView()">
+                            Begin Your Walk →
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section - Community Style -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="testimonials-header">
+                <h2>Happy Walker Stories</h2>
+                <p class="section-subtitle">Real people, real stories, real change</p>
+            </div>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"I came for the walk, stayed for the friends! This group literally saved me during my darkest days. Now Saturday mornings are my happy place."</p>
+                    </div>
+                    <div class="testimonial-footer">
+                        <div class="author-avatar" style="background: #FFB6C1">SM</div>
+                        <div class="author-info">
+                            <strong>Sarah M.</strong>
+                            <span>Walking for 6 months</span>
+                        </div>
+                        <div class="author-badge">⭐ Regular</div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card featured">
+                    <div class="testimonial-content">
+                        <p>"Best decision ever! No pressure, no judgment, just good vibes and nature. My anxiety doesn't stand a chance against this amazing community!"</p>
+                    </div>
+                    <div class="testimonial-footer">
+                        <div class="author-avatar" style="background: #98D8C8">DL</div>
+                        <div class="author-info">
+                            <strong>David L.</strong>
+                            <span>Never misses a walk</span>
+                        </div>
+                        <div class="author-badge">Champion</div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"Free therapy with a side of fresh air! I've tried everything, but nothing beats walking and talking with people who just get it."</p>
+                    </div>
+                    <div class="testimonial-footer">
+                        <div class="author-avatar" style="background: #F7DC6F">MR</div>
+                        <div class="author-info">
+                            <strong>Maria R.</strong>
+                            <span>1 year strong</span>
+                        </div>
+                        <div class="author-badge">Anniversary</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonials-stats">
+                <div class="stat-bubble">
+                    <span class="stat-num">98%</span>
+                    <span class="stat-text">Feel happier</span>
+                </div>
+                <div class="stat-bubble">
+                    <span class="stat-num">500+</span>
+                    <span class="stat-text">Happy walkers</span>
+                </div>
+                <div class="stat-bubble">
+                    <span class="stat-num">12</span>
+                    <span class="stat-text">Years of smiles</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section - Community Style -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-header">
+                <h2>Our Story & Mission</h2>
+                <p class="section-subtitle">Started with a walk, grew into a movement</p>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-main">
+                    <div class="about-card story-card">
+                        <h3>How It Started</h3>
+                        <p>12 years ago, a few friends decided to walk together every Saturday morning. Word spread, hearts opened, and now we're a family of 500+ walkers!</p>
+                        <div class="fun-fact">
+                            <span>Fun fact:</span> Our first walk had just 3 people and 1 dog named Happy! 🐕
+                        </div>
+                    </div>
+                    
+                    <div class="about-card mission-card">
+                        <h3>Why We Walk</h3>
+                        <p>Mental health doesn't have to be scary or lonely. We believe in the power of nature + community = healing. Simple as that!</p>
+                        <div class="values-list">
+                            <span class="value">✓ No judgment</span>
+                            <span class="value">✓ All welcome</span>
+                            <span class="value">✓ Always free</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="impact-section">
+                    <h3>The Ripple Effect</h3>
+                    <div class="impact-cards">
+                        <div class="impact-card">
+                            <span class="impact-icon">🤗</span>
+                            <h4>Lives Changed</h4>
+                            <p>Every walker has a story of transformation</p>
+                        </div>
+                        <div class="impact-card">
+                            <span class="impact-icon">🌳</span>
+                            <h4>Nature Protected</h4>
+                            <p>We care for the trails that heal us</p>
+                        </div>
+                        <div class="impact-card">
+                            <span class="impact-icon">💪</span>
+                            <h4>Community Strong</h4>
+                            <p>Together, we're unstoppable</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="inspiration-quote">
+                    <blockquote>
+                        "Come for the walk, stay for the people, leave with hope" 
+                        <span class="quote-author">- Every walker ever</span>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration Section - Community Style -->
+    <section class="registration" id="register">
+        <div class="container">
+            <div class="registration-content">
+                <div class="form-header">
+                    <h2>Yes! Save My Spot</h2>
+                    <p class="form-subtitle">Takes 30 seconds • No spam, just love</p>
+                </div>
+                
+                <div class="form-container">
+                    <div class="form-sidebar">
+                        <h3>What happens next?</h3>
+                        <div class="process-steps">
+                            <div class="step">
+                                <span class="step-num">1</span>
+                                <p>Get a friendly welcome email</p>
+                            </div>
+                            <div class="step">
+                                <span class="step-num">2</span>
+                                <p>Receive reminder 2 days before</p>
+                            </div>
+                            <div class="step">
+                                <span class="step-num">3</span>
+                                <p>Show up & enjoy!</p>
+                            </div>
+                        </div>
+                        <div class="guarantee">
+                            <span class="guarantee-icon">🛡️</span>
+                            <p><strong>Privacy Promise:</strong> Your info is safe with us. No selling, no sharing, just caring!</p>
+                        </div>
+                    </div>
+                    
+                    <form class="friendly-form" onsubmit="handleSubmit(event)">
+                        <div class="form-greeting">
+                            <p>Hi there! Let's get you signed up</p>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">What should we call you?</label>
+                            <div class="name-inputs">
+                                <input type="text" placeholder="First name" required class="friendly-input">
+                                <input type="text" placeholder="Last name (optional)" class="friendly-input">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Where should we send the details?</label>
+                            <input type="email" placeholder="your@email.com" required class="friendly-input">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Want text reminders? (optional)</label>
+                            <input type="tel" placeholder="Your phone number" class="friendly-input">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">How'd you find us?</label>
+                            <select class="friendly-select">
+                                <option>Choose one...</option>
+                                <option>A friend told me</option>
+                                <option>Social media</option>
+                                <option>Google search</option>
+                                <option>Just lucky, I guess!</option>
+                            </select>
+                        </div>
+                        
+                        <div class="consent-box">
+                            <label class="friendly-checkbox">
+                                <input type="checkbox" required>
+                                <span>Yes! Send me walking tips & mental health resources (you can unsubscribe anytime)</span>
+                            </label>
+                        </div>
+                        
+                        <button type="submit" class="submit-button">
+                            <span>Count Me In!</span>
+                        </button>
+                        
+                        <p class="form-footer">See you Saturday! Bring comfy shoes and a smile</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">Walk & Talk</div>
+                <ul class="footer-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#event">Event Details</a></li>
+                    <li><a href="#benefits">Benefits</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#register">Register</a></li>
+                </ul>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Walk & Talk. A Mental Health Awareness Week Initiative.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+        
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+        
+        // Parallax effect for hero (removed to fix overlap issue)
+        // Only fade hero content, don't move the hero section
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const heroContent = document.querySelector('.hero-content');
+            
+            if (heroContent && scrolled < window.innerHeight) {
+                heroContent.style.opacity = 1 - (scrolled / 800);
+            }
+        });
+        
+        // Form submission handler
+        function handleSubmit(event) {
+            event.preventDefault();
+            
+            const form = event.target;
+            const submitBtn = form.querySelector('.submit-btn');
+            const originalText = submitBtn.textContent;
+            
+            // Show loading state
+            submitBtn.textContent = 'Submitting...';
+            submitBtn.disabled = true;
+            
+            // Simulate form submission
+            setTimeout(() => {
+                // Reset form
+                form.reset();
+                
+                // Show success message
+                submitBtn.textContent = '✓ Registration Complete!';
+                submitBtn.style.background = 'var(--sage-green)';
+                
+                // Reset button after 3 seconds
+                setTimeout(() => {
+                    submitBtn.textContent = originalText;
+                    submitBtn.disabled = false;
+                    submitBtn.style.background = '';
+                }, 3000);
+                
+                // Show alert (in real app, show better notification)
+                alert('Thank you for registering! We\'ll send you event details soon.');
+            }, 1500);
+        }
+    </script>
+</body>
+</html>

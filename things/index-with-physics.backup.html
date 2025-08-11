@@ -1,0 +1,2530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Walk & Talk - Free Mental Health Nature Walk | Aug 16, Shah Alam</title>
+    <meta name="description" content="Join our free healing community walk for Mental Health Awareness Week. Nature meets wellness at Shah Alam Forest Trail. Register now - completely free, all ages welcome.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Simple Leaf Animation -->
+    <link rel="stylesheet" href="simple-leaves.css">
+    
+    <style>
+        :root {
+            /* Modern Green Nature Palette */
+            --primary-green: #2D5F3F;
+            --sage-green: #87A96B;
+            --mint-green: #98FF98;
+            --forest-dark: #1B3B2F;
+            --leaf-light: #E8F5E8;
+            
+            /* Supporting Colors */
+            --cream: #FFF8F3;
+            --white: #FFFFFF;
+            --text-dark: #1A1A1A;
+            --text-gray: #6B7280;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 0;
+            transition: all 0.3s ease;
+        }
+        
+        .navbar.scrolled {
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-green);
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary-green);
+        }
+        
+        .nav-cta {
+            background: var(--primary-green);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .nav-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(45, 95, 63, 0.3);
+        }
+        
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, #E8F5E8 0%, #FFF8F3 50%, #FFFFFF 100%);
+            padding-top: 80px;
+        }
+        
+        /* Background Pattern */
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(135, 169, 107, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(45, 95, 63, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 40% 60%, rgba(152, 255, 152, 0.08) 0%, transparent 50%);
+            z-index: 0;
+        }
+        
+        /* Leaf animations are now in simple-leaves.css for smooth, gentle falling */
+        
+        /* Hero Section */
+                transform: translateY(-30px) translateX(10px) rotate(8deg) scale(0.95);
+                opacity: 0.6;
+            }
+            4% {
+                transform: translateY(20px) translateX(18px) rotate(12deg) scale(1);
+                opacity: 0.8;
+            }
+            5% {
+                transform: translateY(80px) translateX(28px) rotate(16deg) scale(1);
+                opacity: 1;
+            }
+            /* Acceleration phase - gravity overcomes initial resistance */
+            7% {
+                transform: translateY(180px) translateX(42px) rotate(22deg) scale(1);
+                opacity: 1;
+            }
+            10% {
+                transform: translateY(340px) translateX(58px) rotate(28deg) scale(1);
+            }
+            13% {
+                transform: translateY(520px) translateX(68px) rotate(32deg) scale(1);
+            }
+            16% {
+                transform: translateY(720px) translateX(72px) rotate(35deg) scale(1);
+            }
+            /* Terminal velocity reached - pendulum swing begins */
+            20% {
+                transform: translateY(960px) translateX(70px) rotate(38deg) scale(1);
+            }
+            24% {
+                transform: translateY(1200px) translateX(62px) rotate(35deg) scale(1);
+            }
+            28% {
+                transform: translateY(1440px) translateX(48px) rotate(30deg) scale(1);
+            }
+            32% {
+                transform: translateY(1680px) translateX(28px) rotate(22deg) scale(1);
+            }
+            36% {
+                transform: translateY(1920px) translateX(5px) rotate(12deg) scale(1);
+            }
+            40% {
+                transform: translateY(2160px) translateX(-20px) rotate(0deg) scale(1);
+            }
+            44% {
+                transform: translateY(2400px) translateX(-42px) rotate(-12deg) scale(1);
+            }
+            48% {
+                transform: translateY(2640px) translateX(-58px) rotate(-22deg) scale(1);
+            }
+            52% {
+                transform: translateY(2880px) translateX(-68px) rotate(-30deg) scale(1);
+            }
+            56% {
+                transform: translateY(3120px) translateX(-70px) rotate(-35deg) scale(1);
+            }
+            60% {
+                transform: translateY(3360px) translateX(-65px) rotate(-32deg) scale(1);
+            }
+            64% {
+                transform: translateY(3600px) translateX(-52px) rotate(-25deg) scale(1);
+            }
+            68% {
+                transform: translateY(3840px) translateX(-32px) rotate(-15deg) scale(1);
+            }
+            72% {
+                transform: translateY(4080px) translateX(-8px) rotate(-5deg) scale(1);
+            }
+            76% {
+                transform: translateY(4320px) translateX(18px) rotate(8deg) scale(1);
+            }
+            80% {
+                transform: translateY(4560px) translateX(40px) rotate(18deg) scale(1);
+            }
+            84% {
+                transform: translateY(4800px) translateX(55px) rotate(25deg) scale(1);
+            }
+            88% {
+                transform: translateY(5040px) translateX(62px) rotate(30deg) scale(1);
+                opacity: 1;
+            }
+            /* Deceleration and fade out */
+            92% {
+                transform: translateY(5280px) translateX(60px) rotate(32deg) scale(0.95);
+                opacity: 0.7;
+            }
+            96% {
+                transform: translateY(5520px) translateX(52px) rotate(30deg) scale(0.9);
+                opacity: 0.3;
+            }
+            100% {
+                transform: translateY(5760px) translateX(45px) rotate(28deg) scale(0.85);
+                opacity: 0;
+            }
+        }
+        
+        /* Realistic tumbling motion with aerodynamic wobble
+           Based on Reynolds number for turbulent flow around leaf */
+        @keyframes aerodynamic-tumble {
+            0% {
+                transform: translateY(-120px) translateX(0px) rotate3d(1, 0.5, 0, 0deg) scale(0.7);
+                opacity: 0;
+            }
+            /* Slow initial tumble */
+            2% {
+                transform: translateY(-40px) translateX(3px) rotate3d(1, 0.5, 0, 45deg) scale(0.85);
+                opacity: 0.5;
+            }
+            4% {
+                transform: translateY(60px) translateX(8px) rotate3d(1, 0.5, 0, 90deg) scale(1);
+                opacity: 0.9;
+            }
+            6% {
+                transform: translateY(180px) translateX(15px) rotate3d(1, 0.5, 0, 140deg) scale(1);
+                opacity: 1;
+            }
+            /* Accelerating tumble with wobble */
+            10% {
+                transform: translateY(420px) translateX(25px) rotate3d(1, 0.5, 0, 250deg) scale(1);
+            }
+            14% {
+                transform: translateY(680px) translateX(35px) rotate3d(1, 0.5, 0, 380deg) scale(1);
+            }
+            18% {
+                transform: translateY(960px) translateX(40px) rotate3d(1, 0.5, 0, 520deg) scale(1);
+            }
+            22% {
+                transform: translateY(1260px) translateX(38px) rotate3d(1, 0.5, 0, 670deg) scale(1);
+            }
+            26% {
+                transform: translateY(1560px) translateX(30px) rotate3d(1, 0.5, 0, 830deg) scale(1);
+            }
+            30% {
+                transform: translateY(1860px) translateX(18px) rotate3d(1, 0.5, 0, 1000deg) scale(1);
+            }
+            34% {
+                transform: translateY(2160px) translateX(2px) rotate3d(1, 0.5, 0, 1180deg) scale(1);
+            }
+            38% {
+                transform: translateY(2460px) translateX(-15px) rotate3d(1, 0.5, 0, 1370deg) scale(1);
+            }
+            42% {
+                transform: translateY(2760px) translateX(-28px) rotate3d(1, 0.5, 0, 1570deg) scale(1);
+            }
+            46% {
+                transform: translateY(3060px) translateX(-35px) rotate3d(1, 0.5, 0, 1780deg) scale(1);
+            }
+            50% {
+                transform: translateY(3360px) translateX(-38px) rotate3d(1, 0.5, 0, 2000deg) scale(1);
+            }
+            54% {
+                transform: translateY(3660px) translateX(-35px) rotate3d(1, 0.5, 0, 2230deg) scale(1);
+            }
+            58% {
+                transform: translateY(3960px) translateX(-25px) rotate3d(1, 0.5, 0, 2470deg) scale(1);
+            }
+            62% {
+                transform: translateY(4260px) translateX(-10px) rotate3d(1, 0.5, 0, 2720deg) scale(1);
+            }
+            66% {
+                transform: translateY(4560px) translateX(8px) rotate3d(1, 0.5, 0, 2980deg) scale(1);
+            }
+            70% {
+                transform: translateY(4860px) translateX(22px) rotate3d(1, 0.5, 0, 3250deg) scale(1);
+            }
+            74% {
+                transform: translateY(5160px) translateX(32px) rotate3d(1, 0.5, 0, 3530deg) scale(1);
+            }
+            78% {
+                transform: translateY(5460px) translateX(36px) rotate3d(1, 0.5, 0, 3820deg) scale(1);
+            }
+            82% {
+                transform: translateY(5760px) translateX(35px) rotate3d(1, 0.5, 0, 4120deg) scale(1);
+            }
+            86% {
+                transform: translateY(6060px) translateX(28px) rotate3d(1, 0.5, 0, 4430deg) scale(0.95);
+                opacity: 0.9;
+            }
+            90% {
+                transform: translateY(6360px) translateX(18px) rotate3d(1, 0.5, 0, 4750deg) scale(0.9);
+                opacity: 0.6;
+            }
+            95% {
+                transform: translateY(6660px) translateX(8px) rotate3d(1, 0.5, 0, 5080deg) scale(0.85);
+                opacity: 0.3;
+            }
+            100% {
+                transform: translateY(6960px) translateX(0px) rotate3d(1, 0.5, 0, 5420deg) scale(0.8);
+                opacity: 0;
+            }
+        }
+        
+        /* Helical spiral descent - simulates vortex shedding
+           Models Von Karman vortex street effect on falling leaf */
+        @keyframes helical-descent {
+            0% {
+                transform: translateY(-120px) translateX(0px) translateZ(0px) rotateY(0deg) rotateZ(0deg) scale(0.6);
+                opacity: 0;
+            }
+            /* Initial spiral formation */
+            2% {
+                transform: translateY(-20px) translateX(15px) translateZ(10px) rotateY(20deg) rotateZ(10deg) scale(0.8);
+                opacity: 0.4;
+            }
+            4% {
+                transform: translateY(100px) translateX(35px) translateZ(20px) rotateY(45deg) rotateZ(20deg) scale(0.95);
+                opacity: 0.8;
+            }
+            6% {
+                transform: translateY(240px) translateX(55px) translateZ(30px) rotateY(72deg) rotateZ(30deg) scale(1);
+                opacity: 1;
+            }
+            /* Tightening spiral with acceleration */
+            10% {
+                transform: translateY(480px) translateX(75px) translateZ(35px) rotateY(120deg) rotateZ(45deg) scale(1);
+            }
+            14% {
+                transform: translateY(740px) translateX(85px) translateZ(30px) rotateY(180deg) rotateZ(60deg) scale(1);
+            }
+            18% {
+                transform: translateY(1020px) translateX(80px) translateZ(20px) rotateY(250deg) rotateZ(75deg) scale(1);
+            }
+            22% {
+                transform: translateY(1320px) translateX(65px) translateZ(10px) rotateY(330deg) rotateZ(85deg) scale(1);
+            }
+            26% {
+                transform: translateY(1620px) translateX(40px) translateZ(0px) rotateY(420deg) rotateZ(90deg) scale(1);
+            }
+            30% {
+                transform: translateY(1920px) translateX(10px) translateZ(-10px) rotateY(520deg) rotateZ(85deg) scale(1);
+            }
+            34% {
+                transform: translateY(2220px) translateX(-25px) translateZ(-20px) rotateY(630deg) rotateZ(75deg) scale(1);
+            }
+            38% {
+                transform: translateY(2520px) translateX(-55px) translateZ(-30px) rotateY(750deg) rotateZ(60deg) scale(1);
+            }
+            42% {
+                transform: translateY(2820px) translateX(-75px) translateZ(-35px) rotateY(880deg) rotateZ(45deg) scale(1);
+            }
+            46% {
+                transform: translateY(3120px) translateX(-85px) translateZ(-30px) rotateY(1020deg) rotateZ(30deg) scale(1);
+            }
+            50% {
+                transform: translateY(3420px) translateX(-80px) translateZ(-20px) rotateY(1170deg) rotateZ(15deg) scale(1);
+            }
+            54% {
+                transform: translateY(3720px) translateX(-65px) translateZ(-10px) rotateY(1330deg) rotateZ(0deg) scale(1);
+            }
+            58% {
+                transform: translateY(4020px) translateX(-40px) translateZ(0px) rotateY(1500deg) rotateZ(-15deg) scale(1);
+            }
+            62% {
+                transform: translateY(4320px) translateX(-10px) translateZ(10px) rotateY(1680deg) rotateZ(-30deg) scale(1);
+            }
+            66% {
+                transform: translateY(4620px) translateX(25px) translateZ(20px) rotateY(1870deg) rotateZ(-45deg) scale(1);
+            }
+            70% {
+                transform: translateY(4920px) translateX(55px) translateZ(30px) rotateY(2070deg) rotateZ(-60deg) scale(1);
+            }
+            74% {
+                transform: translateY(5220px) translateX(75px) translateZ(35px) rotateY(2280deg) rotateZ(-75deg) scale(1);
+            }
+            78% {
+                transform: translateY(5520px) translateX(85px) translateZ(30px) rotateY(2500deg) rotateZ(-85deg) scale(1);
+            }
+            82% {
+                transform: translateY(5820px) translateX(80px) translateZ(20px) rotateY(2730deg) rotateZ(-90deg) scale(0.95);
+                opacity: 1;
+            }
+            86% {
+                transform: translateY(6120px) translateX(65px) translateZ(10px) rotateY(2970deg) rotateZ(-85deg) scale(0.9);
+                opacity: 0.8;
+            }
+            90% {
+                transform: translateY(6420px) translateX(45px) translateZ(0px) rotateY(3220deg) rotateZ(-75deg) scale(0.85);
+                opacity: 0.5;
+            }
+            95% {
+                transform: translateY(6720px) translateX(20px) translateZ(-5px) rotateY(3480deg) rotateZ(-60deg) scale(0.8);
+                opacity: 0.2;
+            }
+            100% {
+                transform: translateY(7020px) translateX(0px) translateZ(0px) rotateY(3750deg) rotateZ(-45deg) scale(0.75);
+                opacity: 0;
+            }
+        }
+        
+        /* Gliding fall - models high aspect ratio leaf behavior
+           Simulates leaves with better lift-to-drag ratio */
+        @keyframes gliding-fall {
+            0% {
+                transform: translateY(-120px) translateX(0px) rotateX(0deg) rotateZ(0deg) scale(0.5);
+                opacity: 0;
+            }
+            /* Gentle release with immediate glide */
+            2% {
+                transform: translateY(-50px) translateX(20px) rotateX(5deg) rotateZ(-5deg) scale(0.7);
+                opacity: 0.3;
+            }
+            4% {
+                transform: translateY(40px) translateX(45px) rotateX(10deg) rotateZ(-10deg) scale(0.9);
+                opacity: 0.7;
+            }
+            6% {
+                transform: translateY(150px) translateX(75px) rotateX(15deg) rotateZ(-15deg) scale(1);
+                opacity: 1;
+            }
+            /* Long glide phase with gradual descent */
+            10% {
+                transform: translateY(350px) translateX(120px) rotateX(18deg) rotateZ(-18deg) scale(1);
+            }
+            15% {
+                transform: translateY(600px) translateX(165px) rotateX(20deg) rotateZ(-20deg) scale(1);
+            }
+            20% {
+                transform: translateY(880px) translateX(195px) rotateX(22deg) rotateZ(-22deg) scale(1);
+            }
+            25% {
+                transform: translateY(1180px) translateX(210px) rotateX(23deg) rotateZ(-23deg) scale(1);
+            }
+            30% {
+                transform: translateY(1500px) translateX(215px) rotateX(24deg) rotateZ(-24deg) scale(1);
+            }
+            /* Stall and direction change */
+            35% {
+                transform: translateY(1840px) translateX(210px) rotateX(22deg) rotateZ(-20deg) scale(1);
+            }
+            40% {
+                transform: translateY(2200px) translateX(190px) rotateX(18deg) rotateZ(-15deg) scale(1);
+            }
+            45% {
+                transform: translateY(2580px) translateX(155px) rotateX(12deg) rotateZ(-8deg) scale(1);
+            }
+            50% {
+                transform: translateY(2980px) translateX(105px) rotateX(5deg) rotateZ(0deg) scale(1);
+            }
+            /* Second glide in opposite direction */
+            55% {
+                transform: translateY(3400px) translateX(40px) rotateX(-5deg) rotateZ(8deg) scale(1);
+            }
+            60% {
+                transform: translateY(3840px) translateX(-35px) rotateX(-12deg) rotateZ(15deg) scale(1);
+            }
+            65% {
+                transform: translateY(4300px) translateX(-95px) rotateX(-18deg) rotateZ(20deg) scale(1);
+            }
+            70% {
+                transform: translateY(4780px) translateX(-140px) rotateX(-22deg) rotateZ(23deg) scale(1);
+            }
+            75% {
+                transform: translateY(5280px) translateX(-165px) rotateX(-24deg) rotateZ(24deg) scale(1);
+            }
+            /* Final descent */
+            80% {
+                transform: translateY(5800px) translateX(-170px) rotateX(-22deg) rotateZ(22deg) scale(0.95);
+                opacity: 1;
+            }
+            85% {
+                transform: translateY(6340px) translateX(-160px) rotateX(-18deg) rotateZ(18deg) scale(0.9);
+                opacity: 0.8;
+            }
+            90% {
+                transform: translateY(6900px) translateX(-135px) rotateX(-12deg) rotateZ(12deg) scale(0.85);
+                opacity: 0.5;
+            }
+            95% {
+                transform: translateY(7480px) translateX(-95px) rotateX(-5deg) rotateZ(5deg) scale(0.8);
+                opacity: 0.2;
+            }
+            100% {
+                transform: translateY(8080px) translateX(-40px) rotateX(0deg) rotateZ(0deg) scale(0.75);
+                opacity: 0;
+            }
+        }
+        
+        /* Chaotic flutter - models turbulent wake interaction
+           Simulates leaf caught in its own wake vortices */
+        @keyframes chaotic-flutter {
+            0% {
+                transform: translateY(-120px) rotate(0deg) scale(0.4);
+                opacity: 0;
+            }
+            /* Erratic initial motion */
+            2% {
+                transform: translateY(-30px) translateX(12px) rotate(45deg) scale(0.6);
+                opacity: 0.3;
+            }
+            4% {
+                transform: translateY(80px) translateX(-8px) rotate(-30deg) scale(0.8);
+                opacity: 0.6;
+            }
+            6% {
+                transform: translateY(210px) translateX(25px) rotate(90deg) scale(0.95);
+                opacity: 0.9;
+            }
+            8% {
+                transform: translateY(360px) translateX(-18px) rotate(-60deg) scale(1);
+                opacity: 1;
+            }
+            /* Chaotic tumbling with rapid changes */
+            12% {
+                transform: translateY(580px) translateX(35px) rotate(180deg) scale(1);
+            }
+            16% {
+                transform: translateY(820px) translateX(-42px) rotate(-120deg) scale(1);
+            }
+            20% {
+                transform: translateY(1080px) translateX(28px) rotate(270deg) scale(1);
+            }
+            24% {
+                transform: translateY(1360px) translateX(-38px) rotate(-200deg) scale(1);
+            }
+            28% {
+                transform: translateY(1660px) translateX(45px) rotate(360deg) scale(1);
+            }
+            32% {
+                transform: translateY(1980px) translateX(-25px) rotate(-300deg) scale(1);
+            }
+            36% {
+                transform: translateY(2320px) translateX(15px) rotate(450deg) scale(1);
+            }
+            40% {
+                transform: translateY(2680px) translateX(-35px) rotate(-380deg) scale(1);
+            }
+            44% {
+                transform: translateY(3060px) translateX(40px) rotate(540deg) scale(1);
+            }
+            48% {
+                transform: translateY(3460px) translateX(-28px) rotate(-480deg) scale(1);
+            }
+            52% {
+                transform: translateY(3880px) translateX(22px) rotate(630deg) scale(1);
+            }
+            56% {
+                transform: translateY(4320px) translateX(-45px) rotate(-560deg) scale(1);
+            }
+            60% {
+                transform: translateY(4780px) translateX(38px) rotate(720deg) scale(1);
+            }
+            64% {
+                transform: translateY(5260px) translateX(-15px) rotate(-660deg) scale(1);
+            }
+            68% {
+                transform: translateY(5760px) translateX(25px) rotate(810deg) scale(1);
+            }
+            72% {
+                transform: translateY(6280px) translateX(-32px) rotate(-750deg) scale(1);
+            }
+            76% {
+                transform: translateY(6820px) translateX(18px) rotate(900deg) scale(0.95);
+            }
+            80% {
+                transform: translateY(7380px) translateX(-22px) rotate(-840deg) scale(0.9);
+                opacity: 0.9;
+            }
+            84% {
+                transform: translateY(7960px) translateX(28px) rotate(990deg) scale(0.85);
+                opacity: 0.7;
+            }
+            88% {
+                transform: translateY(8560px) translateX(-12px) rotate(-930deg) scale(0.8);
+                opacity: 0.5;
+            }
+            92% {
+                transform: translateY(9180px) translateX(15px) rotate(1080deg) scale(0.75);
+                opacity: 0.3;
+            }
+            96% {
+                transform: translateY(9820px) translateX(-8px) rotate(-1020deg) scale(0.7);
+                opacity: 0.1;
+            }
+            100% {
+                transform: translateY(10480px) translateX(0px) rotate(1170deg) scale(0.65);
+                opacity: 0;
+            }
+        }
+        
+        /* Hero Content */
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            position: relative;
+            z-index: 2;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        
+        .hero-content {
+            animation: fadeInUp 1s ease-out;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .hero-badge {
+            display: inline-block;
+            background: var(--leaf-light);
+            color: var(--primary-green);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+        
+        h1 {
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            line-height: 1.1;
+            color: var(--forest-dark);
+            margin-bottom: 1.5rem;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, var(--primary-green), var(--sage-green));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hero-description {
+            font-size: 1.25rem;
+            color: var(--text-gray);
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+        
+        .btn-primary {
+            background: var(--primary-green);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.125rem;
+            transition: all 0.3s ease;
+            display: inline-block;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 20px 40px rgba(45, 95, 63, 0.3);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: var(--primary-green);
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.125rem;
+            transition: all 0.3s ease;
+            display: inline-block;
+            border: 2px solid var(--primary-green);
+            cursor: pointer;
+        }
+        
+        .btn-secondary:hover {
+            background: var(--primary-green);
+            color: white;
+            transform: translateY(-3px);
+        }
+        
+        /* Hero Stats */
+        .hero-stats {
+            display: flex;
+            gap: 3rem;
+        }
+        
+        .stat {
+            text-align: left;
+        }
+        
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-green);
+            display: block;
+        }
+        
+        .stat-label {
+            font-size: 0.875rem;
+            color: var(--text-gray);
+        }
+        
+        /* Hero Visual */
+        .hero-visual {
+            position: relative;
+            animation: fadeInUp 1s ease-out 0.3s both;
+        }
+        
+        .nature-illustration {
+            width: 100%;
+            height: auto;
+            position: relative;
+            z-index: 1;
+        }
+        
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        /* Section Spacing */
+        section {
+            padding: 5rem 0;
+        }
+        
+        h2 {
+            font-size: 2.5rem;
+            color: var(--forest-dark);
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        
+        /* Event Details Section - Community Focused */
+        .event-details {
+            background: linear-gradient(180deg, #FFFFFF 0%, #FFF8F3 50%, #F0FFF4 100%);
+            padding: 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .event-details::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(152, 255, 152, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+        
+        /* Friendly Header */
+        .event-header {
+            text-align: center;
+            margin-bottom: 60px;
+            position: relative;
+        }
+        
+        .event-emoji {
+            font-size: 3rem;
+            display: block;
+            margin-bottom: 16px;
+        }
+        
+        .header-label {
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: var(--sage-green);
+            background: var(--leaf-light);
+            padding: 6px 16px;
+            border-radius: 20px;
+            display: inline-block;
+            margin-bottom: 16px;
+        }
+        
+        .header-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--forest-dark);
+            margin-bottom: 12px;
+            line-height: 1.3;
+        }
+        
+        .header-date {
+            display: block;
+            font-size: 1.5rem;
+            color: var(--primary-green);
+            font-weight: 500;
+            margin-top: 8px;
+        }
+        
+        .header-description {
+            font-size: 1.25rem;
+            color: var(--text-gray);
+            margin: 0;
+            font-weight: 400;
+        }
+        
+        /* Main Event Cards */
+        .event-main-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-bottom: 60px;
+        }
+        
+        .event-card {
+            background: white;
+            border-radius: 20px;
+            padding: 28px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        
+        .event-card:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 12px 40px rgba(45, 95, 63, 0.12);
+            border-color: var(--mint-green);
+        }
+        
+        .card-emoji {
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+            display: block;
+        }
+        
+        .event-card h3 {
+            font-size: 1.25rem;
+            color: var(--forest-dark);
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+        
+        .card-pattern {
+            position: absolute;
+            bottom: -20px;
+            right: -20px;
+            width: 100px;
+            height: 100px;
+            background: radial-gradient(circle, var(--leaf-light) 20%, transparent 20%);
+            background-size: 15px 15px;
+            opacity: 0.5;
+            transform: rotate(45deg);
+        }
+        
+        /* When Card */
+        .time-display {
+            margin: 16px 0;
+        }
+        
+        .time-big {
+            display: block;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-green);
+            margin-bottom: 4px;
+        }
+        
+        .time-duration {
+            font-size: 0.95rem;
+            color: var(--sage-green);
+            font-weight: 500;
+        }
+        
+        .card-note {
+            font-size: 0.875rem;
+            color: var(--text-gray);
+            margin-top: 8px;
+            font-style: italic;
+        }
+        
+        /* Where Card */
+        .location-desc {
+            color: var(--text-gray);
+            margin-bottom: 16px;
+            font-size: 0.95rem;
+        }
+        
+        .map-btn {
+            background: var(--leaf-light);
+            color: var(--primary-green);
+            border: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        
+        .map-btn:hover {
+            background: var(--primary-green);
+            color: white;
+            transform: scale(1.05);
+        }
+        
+        /* Who Card */
+        .welcome-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin: 16px 0;
+        }
+        
+        .tag {
+            background: linear-gradient(135deg, #E8F5E8, #F0FFF4);
+            color: var(--primary-green);
+            padding: 6px 12px;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+        
+        /* Journey Timeline */
+        .journey-section {
+            margin-bottom: 48px;
+        }
+        
+        .journey-title {
+            font-size: 1.75rem;
+            color: var(--forest-dark);
+            margin-bottom: 32px;
+            text-align: center;
+            font-weight: 600;
+        }
+        
+        .journey-timeline {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+            position: relative;
+        }
+        
+        .journey-timeline::before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            left: 5%;
+            right: 5%;
+            height: 2px;
+            background: linear-gradient(90deg, var(--sage-green), var(--mint-green));
+            z-index: 0;
+        }
+        
+        .timeline-item {
+            position: relative;
+            text-align: center;
+        }
+        
+        .timeline-dot {
+            width: 40px;
+            height: 40px;
+            background: white;
+            border: 3px solid var(--sage-green);
+            border-radius: 50%;
+            margin: 0 auto 16px;
+            position: relative;
+            z-index: 1;
+            transition: all 0.3s ease;
+        }
+        
+        .timeline-item:hover .timeline-dot {
+            background: var(--sage-green);
+            transform: scale(1.2);
+        }
+        
+        .timeline-content {
+            background: white;
+            padding: 16px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+        
+        .timeline-time {
+            display: block;
+            font-size: 0.75rem;
+            color: var(--primary-green);
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+        
+        .timeline-content h4 {
+            font-size: 1rem;
+            color: var(--forest-dark);
+            margin: 0 0 4px 0;
+            font-weight: 600;
+        }
+        
+        .timeline-content p {
+            font-size: 0.85rem;
+            color: var(--text-gray);
+            margin: 0;
+        }
+        
+        /* Community Features */
+        .community-features {
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+            margin-bottom: 48px;
+            flex-wrap: wrap;
+        }
+        
+        .feature {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 20px;
+            background: white;
+            border-radius: 30px;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .feature:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 20px rgba(45, 95, 63, 0.15);
+        }
+        
+        .feature-icon {
+            font-size: 1.5rem;
+        }
+        
+        .feature-text {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--forest-dark);
+        }
+        
+        /* Join Section */
+        .join-section {
+            background: linear-gradient(135deg, #FFE4E1 0%, #E8F5E8 100%);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .join-section::before {
+            content: '🌿';
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            font-size: 100px;
+            opacity: 0.1;
+            transform: rotate(-15deg);
+        }
+        
+        .join-content {
+            margin-bottom: 24px;
+        }
+        
+        .join-avatars {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 16px;
+        }
+        
+        .avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 600;
+            font-size: 0.875rem;
+            border: 3px solid white;
+            margin-left: -12px;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        
+        .avatar:first-child {
+            margin-left: 0;
+        }
+        
+        .avatar:hover {
+            transform: scale(1.1) translateY(-5px);
+            z-index: 10;
+        }
+        
+        .join-text {
+            font-size: 1.125rem;
+            color: var(--forest-dark);
+            margin: 0;
+            font-weight: 500;
+        }
+        
+        .join-btn {
+            background: var(--primary-green);
+            color: white;
+            padding: 16px 40px;
+            border: none;
+            border-radius: 30px;
+            font-size: 1.125rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .join-btn:hover {
+            background: var(--forest-dark);
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(45, 95, 63, 0.3);
+        }
+        
+        .join-btn::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+        
+        .join-btn:active::after {
+            width: 300px;
+            height: 300px;
+        }
+        
+        /* Benefits Section - Community Style */
+        .benefits {
+            background: linear-gradient(135deg, #FFF8F3 0%, #FFFFFF 100%);
+            padding: 80px 0;
+        }
+        
+        .benefits-header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+        
+        .section-emoji {
+            font-size: 3rem;
+            display: block;
+            margin-bottom: 16px;
+        }
+        
+        .section-subtitle {
+            font-size: 1.125rem;
+            color: var(--text-gray);
+            margin-top: 8px;
+        }
+        
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            margin-bottom: 48px;
+        }
+        
+        .benefit-card {
+            background: white;
+            border-radius: 20px;
+            padding: 32px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        
+        .benefit-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 12px 40px rgba(45, 95, 63, 0.15);
+            border-color: var(--mint-green);
+        }
+        
+        .benefit-emoji {
+            font-size: 2.5rem;
+            display: block;
+            margin-bottom: 16px;
+        }
+        
+        .benefit-content h4 {
+            font-size: 1.25rem;
+            color: var(--forest-dark);
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+        
+        .benefit-content p {
+            font-size: 0.95rem;
+            color: var(--text-gray);
+            line-height: 1.6;
+            margin-bottom: 16px;
+        }
+        
+        .benefit-tag {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--leaf-light), #E8FFF0);
+            color: var(--primary-green);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+        
+        .benefit-decoration {
+            position: absolute;
+            bottom: -30px;
+            right: -30px;
+            width: 100px;
+            height: 100px;
+            background: radial-gradient(circle, var(--mint-green) 20%, transparent 20%);
+            background-size: 20px 20px;
+            opacity: 0.1;
+            transform: rotate(45deg);
+        }
+        
+        .benefits-cta {
+            text-align: center;
+            font-size: 1.25rem;
+            color: var(--primary-green);
+            font-weight: 600;
+        }
+        
+        /* Testimonials Section - Community Style */
+        .testimonials {
+            background: #FAFBFC;
+            padding: 80px 0;
+        }
+        
+        .testimonials-header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 24px;
+            margin-bottom: 48px;
+        }
+        
+        .testimonial-card {
+            background: white;
+            padding: 32px;
+            border-radius: 20px;
+            position: relative;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+        }
+        
+        .testimonial-card.featured {
+            transform: scale(1.05);
+            box-shadow: 0 8px 30px rgba(45, 95, 63, 0.12);
+            border: 2px solid var(--mint-green);
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .quote-emoji {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 2rem;
+            opacity: 0.3;
+        }
+        
+        .testimonial-content {
+            margin-bottom: 24px;
+        }
+        
+        .testimonial-content p {
+            color: var(--text-dark);
+            line-height: 1.8;
+            font-size: 1rem;
+        }
+        
+        .testimonial-footer {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .author-avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 600;
+            font-size: 1rem;
+        }
+        
+        .author-info {
+            flex: 1;
+        }
+        
+        .author-info strong {
+            display: block;
+            color: var(--forest-dark);
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+        
+        .author-info span {
+            font-size: 0.875rem;
+            color: var(--text-gray);
+        }
+        
+        .author-badge {
+            background: linear-gradient(135deg, var(--leaf-light), #E8FFF0);
+            color: var(--primary-green);
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+        
+        .testimonials-stats {
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+        }
+        
+        .stat-bubble {
+            text-align: center;
+            padding: 20px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+            transition: all 0.3s ease;
+        }
+        
+        .stat-bubble:hover {
+            transform: scale(1.1);
+        }
+        
+        .stat-num {
+            display: block;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-green);
+            margin-bottom: 4px;
+        }
+        
+        .stat-text {
+            font-size: 0.875rem;
+            color: var(--text-gray);
+        }
+        
+        /* About Section - Community Style */
+        .about {
+            background: linear-gradient(180deg, #FFFFFF 0%, #F0FFF4 100%);
+            padding: 80px 0;
+        }
+        
+        .about-header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+        
+        .about-main {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin-bottom: 48px;
+        }
+        
+        .about-card {
+            background: white;
+            padding: 32px;
+            border-radius: 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .card-emoji {
+            font-size: 2.5rem;
+            display: block;
+            margin-bottom: 16px;
+        }
+        
+        .about-card h3 {
+            font-size: 1.5rem;
+            color: var(--forest-dark);
+            margin-bottom: 16px;
+        }
+        
+        .about-card p {
+            color: var(--text-gray);
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+        
+        .fun-fact {
+            background: linear-gradient(135deg, #FFE4E1, #FFF0F5);
+            padding: 16px;
+            border-radius: 12px;
+            font-size: 0.9rem;
+            color: var(--forest-dark);
+        }
+        
+        .fun-fact span {
+            font-weight: 600;
+            color: var(--primary-green);
+        }
+        
+        .values-list {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+        
+        .value {
+            background: var(--leaf-light);
+            color: var(--primary-green);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        
+        .impact-section {
+            margin-bottom: 48px;
+        }
+        
+        .impact-section h3 {
+            text-align: center;
+            font-size: 1.75rem;
+            color: var(--forest-dark);
+            margin-bottom: 32px;
+        }
+        
+        .impact-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+        
+        .impact-card {
+            text-align: center;
+            padding: 24px;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .impact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(45, 95, 63, 0.15);
+        }
+        
+        .impact-icon {
+            font-size: 2.5rem;
+            display: block;
+            margin-bottom: 12px;
+        }
+        
+        .impact-card h4 {
+            font-size: 1.125rem;
+            color: var(--forest-dark);
+            margin-bottom: 8px;
+        }
+        
+        .impact-card p {
+            font-size: 0.875rem;
+            color: var(--text-gray);
+        }
+        
+        .inspiration-quote {
+            background: linear-gradient(135deg, var(--leaf-light), #E8FFF0);
+            padding: 32px;
+            border-radius: 20px;
+            text-align: center;
+        }
+        
+        .inspiration-quote blockquote {
+            font-size: 1.5rem;
+            color: var(--forest-dark);
+            font-weight: 600;
+            line-height: 1.6;
+            margin: 0;
+        }
+        
+        .inspiration-quote .quote-author {
+            display: block;
+            margin-top: 16px;
+            font-size: 1rem;
+            color: var(--primary-green);
+            font-weight: normal;
+        }
+        
+        /* Registration Section - Community Style */
+        .registration {
+            background: #FAFBFC;
+            padding: 80px 0;
+        }
+        
+        .registration-content {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .form-header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+        
+        .form-subtitle {
+            font-size: 1.125rem;
+            color: var(--text-gray);
+            margin-top: 8px;
+        }
+        
+        .form-container {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 48px;
+            background: white;
+            padding: 48px;
+            border-radius: 24px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+        }
+        
+        .form-sidebar h3 {
+            font-size: 1.25rem;
+            color: var(--forest-dark);
+            margin-bottom: 24px;
+        }
+        
+        .process-steps {
+            margin-bottom: 32px;
+        }
+        
+        .step {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 16px;
+        }
+        
+        .step-num {
+            width: 32px;
+            height: 32px;
+            background: var(--primary-green);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        
+        .step p {
+            color: var(--text-gray);
+            font-size: 0.95rem;
+        }
+        
+        .guarantee {
+            background: linear-gradient(135deg, #E8F5E8, #F0FFF4);
+            padding: 20px;
+            border-radius: 16px;
+            display: flex;
+            gap: 12px;
+        }
+        
+        .guarantee-icon {
+            font-size: 1.5rem;
+        }
+        
+        .guarantee p {
+            font-size: 0.875rem;
+            color: var(--text-dark);
+            line-height: 1.5;
+        }
+        
+        .friendly-form {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .form-greeting {
+            background: linear-gradient(135deg, #FFE4E1, #FFF0F5);
+            padding: 16px;
+            border-radius: 12px;
+            text-align: center;
+        }
+        
+        .form-greeting p {
+            color: var(--forest-dark);
+            font-weight: 500;
+            margin: 0;
+        }
+        
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        
+        .form-label {
+            font-size: 0.95rem;
+            color: var(--forest-dark);
+            font-weight: 600;
+        }
+        
+        .name-inputs {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+        
+        .friendly-input,
+        .friendly-select {
+            padding: 12px 16px;
+            border: 2px solid #E5E7EB;
+            border-radius: 12px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            background: white;
+        }
+        
+        .friendly-input:focus,
+        .friendly-select:focus {
+            outline: none;
+            border-color: var(--primary-green);
+            box-shadow: 0 0 0 3px rgba(45, 95, 63, 0.1);
+        }
+        
+        .consent-box {
+            background: var(--leaf-light);
+            padding: 16px;
+            border-radius: 12px;
+        }
+        
+        .friendly-checkbox {
+            display: flex;
+            align-items: start;
+            gap: 12px;
+            cursor: pointer;
+        }
+        
+        .friendly-checkbox input {
+            width: 20px;
+            height: 20px;
+            margin-top: 2px;
+            cursor: pointer;
+        }
+        
+        .friendly-checkbox span {
+            font-size: 0.9rem;
+            color: var(--text-dark);
+            line-height: 1.5;
+        }
+        
+        .submit-button {
+            background: var(--primary-green);
+            color: white;
+            padding: 18px 40px;
+            border: none;
+            border-radius: 30px;
+            font-size: 1.125rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .submit-button:hover {
+            background: var(--forest-dark);
+            transform: scale(1.02);
+            box-shadow: 0 10px 30px rgba(45, 95, 63, 0.3);
+        }
+        
+        .form-footer {
+            text-align: center;
+            color: var(--text-gray);
+            font-size: 0.9rem;
+            margin: 0;
+        }
+        
+        /* Footer */
+        .footer {
+            background: var(--forest-dark);
+            color: white;
+            padding: 3rem 0 1.5rem;
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .footer-logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--mint-green);
+        }
+        
+        .footer-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: var(--mint-green);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 1.5rem;
+        }
+        
+        .footer-bottom p {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.95rem;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .hero-buttons {
+                justify-content: center;
+            }
+            
+            .hero-stats {
+                justify-content: center;
+            }
+            
+            .hero-visual {
+                margin-top: 2rem;
+                max-width: 400px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            
+            .event-main-cards {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .journey-timeline {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .journey-timeline::before {
+                display: none;
+            }
+            
+            .community-features {
+                gap: 12px;
+            }
+            
+            .feature {
+                flex: 1 1 45%;
+                min-width: 150px;
+                padding: 10px 16px;
+            }
+            
+            .header-title {
+                font-size: 1.75rem;
+            }
+            
+            .join-section {
+                padding: 24px;
+            }
+            
+            .join-avatars {
+                transform: scale(0.9);
+            }
+            
+            /* Reduce leaves on mobile for performance */
+            .leaf-3, .leaf-4, .leaf-5 {
+                display: none;
+            }
+            
+            .benefits-grid,
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .testimonials-stats {
+                flex-direction: column;
+                gap: 16px;
+            }
+            
+            .about-main {
+                grid-template-columns: 1fr;
+            }
+            
+            .impact-cards {
+                grid-template-columns: 1fr;
+            }
+            
+            .form-container {
+                grid-template-columns: 1fr;
+                padding: 24px;
+            }
+            
+            .form-sidebar {
+                display: none;
+            }
+            
+            .name-inputs {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+                gap: 1.5rem;
+                text-align: center;
+            }
+            
+            .footer-links {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            h2 {
+                font-size: 2rem;
+            }
+            
+            section {
+                padding: 3rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Global Falling Leaves - Reduced for better performance -->
+    <div class="global-leaves" aria-hidden="true">
+        <div class="leaf-fall leaf-1"></div>
+        <div class="leaf-fall leaf-2"></div>
+        <div class="leaf-fall leaf-3"></div>
+        <div class="leaf-fall leaf-4"></div>
+        <div class="leaf-fall leaf-5"></div>
+    </div>
+    
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">Walk & Talk 🌿</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#benefits">Benefits</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <a href="#register" class="nav-cta">Join Walk</a>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-container">
+            <div class="hero-content">
+                <span class="hero-badge">🌱 Mental Health Awareness Week</span>
+                <h1>
+                    Find Your Peace<br>
+                    <span class="gradient-text">One Step at a Time</span>
+                </h1>
+                <p class="hero-description">
+                    Join our supportive community for therapeutic nature walks. 
+                    Experience the healing power of movement, nature, and connection.
+                </p>
+                
+                <div class="hero-buttons">
+                    <button class="btn-primary" onclick="document.getElementById('register').scrollIntoView()">
+                        Join Free Walk →
+                    </button>
+                    <button class="btn-secondary" onclick="document.getElementById('about').scrollIntoView()">
+                        Learn More
+                    </button>
+                </div>
+                
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">500+</span>
+                        <span class="stat-label">Happy Walkers</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">12</span>
+                        <span class="stat-label">Years Running</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Free Always</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero-visual">
+                <!-- Modern SVG Illustration -->
+                <svg class="nature-illustration" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Background Circle -->
+                    <circle cx="250" cy="250" r="240" fill="#E8F5E8" opacity="0.5"/>
+                    
+                    <!-- Trees -->
+                    <g class="trees">
+                        <!-- Tree 1 -->
+                        <rect x="150" y="250" width="20" height="100" fill="#2D5F3F"/>
+                        <circle cx="160" cy="240" r="40" fill="#87A96B" opacity="0.8"/>
+                        <circle cx="145" cy="230" r="30" fill="#98FF98" opacity="0.6"/>
+                        
+                        <!-- Tree 2 -->
+                        <rect x="250" y="270" width="25" height="80" fill="#2D5F3F"/>
+                        <circle cx="262" cy="260" r="50" fill="#87A96B" opacity="0.9"/>
+                        <circle cx="275" cy="250" r="35" fill="#98FF98" opacity="0.5"/>
+                        
+                        <!-- Tree 3 -->
+                        <rect x="330" y="260" width="18" height="90" fill="#2D5F3F"/>
+                        <circle cx="339" cy="250" r="35" fill="#87A96B" opacity="0.7"/>
+                    </g>
+                    
+                    <!-- Walking Path -->
+                    <path d="M50 400 Q250 350 450 400" stroke="#2D5F3F" stroke-width="3" fill="none" opacity="0.5"/>
+                    
+                    <!-- Walking Figures -->
+                    <g class="walkers">
+                        <g transform="translate(200, 370)">
+                            <circle cx="0" cy="0" r="8" fill="#2D5F3F"/>
+                            <rect x="-4" y="8" width="8" height="20" rx="2" fill="#2D5F3F"/>
+                        </g>
+                        <g transform="translate(250, 365)">
+                            <circle cx="0" cy="0" r="7" fill="#87A96B"/>
+                            <rect x="-3.5" y="7" width="7" height="18" rx="2" fill="#87A96B"/>
+                        </g>
+                        <g transform="translate(300, 370)">
+                            <circle cx="0" cy="0" r="7" fill="#2D5F3F" opacity="0.7"/>
+                            <rect x="-3.5" y="7" width="7" height="18" rx="2" fill="#2D5F3F" opacity="0.7"/>
+                        </g>
+                    </g>
+                    
+                    <!-- Birds -->
+                    <g class="birds">
+                        <path d="M100 100 Q105 95 110 100" stroke="#2D5F3F" stroke-width="2" fill="none"/>
+                        <path d="M120 110 Q125 105 130 110" stroke="#2D5F3F" stroke-width="2" fill="none"/>
+                        <path d="M85 105 Q90 100 95 105" stroke="#2D5F3F" stroke-width="1.5" fill="none"/>
+                    </g>
+                    
+                    <!-- Sun -->
+                    <circle cx="400" cy="80" r="30" fill="#FFE082" opacity="0.6"/>
+                </svg>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Event Details Section - Community Focused Design -->
+    <section class="event-details" id="event">
+        <div class="container">
+            <!-- Friendly Header -->
+            <div class="event-header">
+                <span class="event-emoji">🌟</span>
+                <div class="header-label">Join Our Next Walk</div>
+                <h2 class="header-title">
+                    Saturday Morning Adventure
+                    <span class="header-date">August 16</span>
+                </h2>
+                <p class="header-description">Come as you are, leave feeling better 💚</p>
+            </div>
+            
+            <!-- Main Event Cards -->
+            <div class="event-main-cards">
+                <!-- When Card -->
+                <div class="event-card when-card">
+                    <div class="card-emoji">☀️</div>
+                    <div class="card-content">
+                        <h3>Early Morning Magic</h3>
+                        <div class="time-display">
+                            <span class="time-big">8:00 AM</span>
+                            <span class="time-duration">3 relaxing hours</span>
+                        </div>
+                        <p class="card-note">Perfect time to start your weekend!</p>
+                    </div>
+                    <div class="card-pattern"></div>
+                </div>
+                
+                <!-- Where Card -->
+                <div class="event-card where-card">
+                    <div class="card-emoji">🌳</div>
+                    <div class="card-content">
+                        <h3>Shah Alam Forest</h3>
+                        <p class="location-desc">Beautiful community trail with shaded paths</p>
+                        <button class="map-btn">
+                            <span>📍 See Meeting Point</span>
+                        </button>
+                    </div>
+                    <div class="card-pattern"></div>
+                </div>
+                
+                <!-- Who Card -->
+                <div class="event-card who-card">
+                    <div class="card-emoji">🤗</div>
+                    <div class="card-content">
+                        <h3>Everyone Welcome!</h3>
+                        <div class="welcome-tags">
+                            <span class="tag">First-timers</span>
+                            <span class="tag">All ages</span>
+                            <span class="tag">Any fitness</span>
+                        </div>
+                        <p class="card-note">No judgment, just support</p>
+                    </div>
+                    <div class="card-pattern"></div>
+                </div>
+            </div>
+            
+            <!-- Journey Timeline -->
+            <div class="journey-section">
+                <h3 class="journey-title">Your Morning Journey 🚶‍♀️</h3>
+                <div class="journey-timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-time">8:00</span>
+                            <h4>Warm Welcome</h4>
+                            <p>Meet new friends over coffee ☕</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-time">8:15</span>
+                            <h4>Nature Walk</h4>
+                            <p>Easy pace, lots of chat & laughs 🌿</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-time">10:00</span>
+                            <h4>Mindful Moment</h4>
+                            <p>Optional sharing circle 💭</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-time">10:30</span>
+                            <h4>Snacks & Stories</h4>
+                            <p>Connect over healthy treats 🍎</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Community Features -->
+            <div class="community-features">
+                <div class="feature">
+                    <span class="feature-icon">💝</span>
+                    <span class="feature-text">Completely FREE</span>
+                </div>
+                <div class="feature">
+                    <span class="feature-icon">👥</span>
+                    <span class="feature-text">25-30 friendly faces</span>
+                </div>
+                <div class="feature">
+                    <span class="feature-icon">🎒</span>
+                    <span class="feature-text">Just bring yourself</span>
+                </div>
+                <div class="feature">
+                    <span class="feature-icon">☂️</span>
+                    <span class="feature-text">Rain or shine!</span>
+                </div>
+            </div>
+            
+            <!-- Join CTA -->
+            <div class="join-section">
+                <div class="join-content">
+                    <div class="join-avatars">
+                        <div class="avatar" style="background: #FFB6C1">JM</div>
+                        <div class="avatar" style="background: #98D8C8">AT</div>
+                        <div class="avatar" style="background: #F7DC6F">RS</div>
+                        <div class="avatar" style="background: #BB8FCE">+22</div>
+                    </div>
+                    <p class="join-text">Join 25 others who've already signed up!</p>
+                </div>
+                <button class="join-btn" onclick="document.getElementById('register').scrollIntoView()">
+                    Save My Spot 🌟
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section - Community Style -->
+    <section class="benefits" id="benefits">
+        <div class="container">
+            <div class="benefits-header">
+                <span class="section-emoji">🌈</span>
+                <h2>Why You'll Love Walking With Us</h2>
+                <p class="section-subtitle">Real benefits from real people who care</p>
+            </div>
+            
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-emoji">😌</div>
+                    <div class="benefit-content">
+                        <h4>Feel Calmer & Lighter</h4>
+                        <p>Watch your worries melt away as you walk. Nature + friends = instant mood boost!</p>
+                        <span class="benefit-tag">Stress Relief</span>
+                    </div>
+                    <div class="benefit-decoration"></div>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-emoji">👯</div>
+                    <div class="benefit-content">
+                        <h4>Make Real Friends</h4>
+                        <p>No small talk, just genuine connections with people who get it. Your tribe awaits!</p>
+                        <span class="benefit-tag">Community</span>
+                    </div>
+                    <div class="benefit-decoration"></div>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-emoji">🎯</div>
+                    <div class="benefit-content">
+                        <h4>Move & Feel Good</h4>
+                        <p>Easy exercise that doesn't feel like exercise. Just walking, talking, and feeling alive!</p>
+                        <span class="benefit-tag">Active Living</span>
+                    </div>
+                    <div class="benefit-decoration"></div>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-emoji">🦋</div>
+                    <div class="benefit-content">
+                        <h4>Nature's Magic</h4>
+                        <p>Fresh air, bird songs, and green spaces. Mother Nature's free therapy session!</p>
+                        <span class="benefit-tag">Forest Therapy</span>
+                    </div>
+                    <div class="benefit-decoration"></div>
+                </div>
+            </div>
+            
+            <div class="benefits-cta">
+                <p>Join us and feel the difference from day one! 💚</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section - Community Style -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="testimonials-header">
+                <span class="section-emoji">💬</span>
+                <h2>Happy Walker Stories</h2>
+                <p class="section-subtitle">Real people, real stories, real change</p>
+            </div>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <span class="quote-emoji">✨</span>
+                    <div class="testimonial-content">
+                        <p>"I came for the walk, stayed for the friends! This group literally saved me during my darkest days. Now Saturday mornings are my happy place."</p>
+                    </div>
+                    <div class="testimonial-footer">
+                        <div class="author-avatar" style="background: #FFB6C1">SM</div>
+                        <div class="author-info">
+                            <strong>Sarah M.</strong>
+                            <span>Walking for 6 months</span>
+                        </div>
+                        <div class="author-badge">⭐ Regular</div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card featured">
+                    <span class="quote-emoji">🌟</span>
+                    <div class="testimonial-content">
+                        <p>"Best decision ever! No pressure, no judgment, just good vibes and nature. My anxiety doesn't stand a chance against this amazing community!"</p>
+                    </div>
+                    <div class="testimonial-footer">
+                        <div class="author-avatar" style="background: #98D8C8">DL</div>
+                        <div class="author-info">
+                            <strong>David L.</strong>
+                            <span>Never misses a walk</span>
+                        </div>
+                        <div class="author-badge">💚 Champion</div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <span class="quote-emoji">🌿</span>
+                    <div class="testimonial-content">
+                        <p>"Free therapy with a side of fresh air! I've tried everything, but nothing beats walking and talking with people who just get it."</p>
+                    </div>
+                    <div class="testimonial-footer">
+                        <div class="author-avatar" style="background: #F7DC6F">MR</div>
+                        <div class="author-info">
+                            <strong>Maria R.</strong>
+                            <span>1 year strong</span>
+                        </div>
+                        <div class="author-badge">🎉 Anniversary</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonials-stats">
+                <div class="stat-bubble">
+                    <span class="stat-num">98%</span>
+                    <span class="stat-text">Feel happier</span>
+                </div>
+                <div class="stat-bubble">
+                    <span class="stat-num">500+</span>
+                    <span class="stat-text">Happy walkers</span>
+                </div>
+                <div class="stat-bubble">
+                    <span class="stat-num">12</span>
+                    <span class="stat-text">Years of smiles</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section - Community Style -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-header">
+                <span class="section-emoji">🌱</span>
+                <h2>Our Story & Mission</h2>
+                <p class="section-subtitle">Started with a walk, grew into a movement</p>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-main">
+                    <div class="about-card story-card">
+                        <span class="card-emoji">📖</span>
+                        <h3>How It Started</h3>
+                        <p>12 years ago, a few friends decided to walk together every Saturday morning. Word spread, hearts opened, and now we're a family of 500+ walkers!</p>
+                        <div class="fun-fact">
+                            <span>Fun fact:</span> Our first walk had just 3 people and 1 dog named Happy! 🐕
+                        </div>
+                    </div>
+                    
+                    <div class="about-card mission-card">
+                        <span class="card-emoji">💚</span>
+                        <h3>Why We Walk</h3>
+                        <p>Mental health doesn't have to be scary or lonely. We believe in the power of nature + community = healing. Simple as that!</p>
+                        <div class="values-list">
+                            <span class="value">✓ No judgment</span>
+                            <span class="value">✓ All welcome</span>
+                            <span class="value">✓ Always free</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="impact-section">
+                    <h3>The Ripple Effect 🌊</h3>
+                    <div class="impact-cards">
+                        <div class="impact-card">
+                            <span class="impact-icon">🤗</span>
+                            <h4>Lives Changed</h4>
+                            <p>Every walker has a story of transformation</p>
+                        </div>
+                        <div class="impact-card">
+                            <span class="impact-icon">🌳</span>
+                            <h4>Nature Protected</h4>
+                            <p>We care for the trails that heal us</p>
+                        </div>
+                        <div class="impact-card">
+                            <span class="impact-icon">💪</span>
+                            <h4>Community Strong</h4>
+                            <p>Together, we're unstoppable</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="inspiration-quote">
+                    <blockquote>
+                        "Come for the walk, stay for the people, leave with hope" 
+                        <span class="quote-author">- Every walker ever 😊</span>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration Section - Community Style -->
+    <section class="registration" id="register">
+        <div class="container">
+            <div class="registration-content">
+                <div class="form-header">
+                    <span class="section-emoji">🎉</span>
+                    <h2>Yes! Save My Spot</h2>
+                    <p class="form-subtitle">Takes 30 seconds • No spam, just love</p>
+                </div>
+                
+                <div class="form-container">
+                    <div class="form-sidebar">
+                        <h3>What happens next? 🌟</h3>
+                        <div class="process-steps">
+                            <div class="step">
+                                <span class="step-num">1</span>
+                                <p>Get a friendly welcome email</p>
+                            </div>
+                            <div class="step">
+                                <span class="step-num">2</span>
+                                <p>Receive reminder 2 days before</p>
+                            </div>
+                            <div class="step">
+                                <span class="step-num">3</span>
+                                <p>Show up & enjoy!</p>
+                            </div>
+                        </div>
+                        <div class="guarantee">
+                            <span class="guarantee-icon">🛡️</span>
+                            <p><strong>Privacy Promise:</strong> Your info is safe with us. No selling, no sharing, just caring!</p>
+                        </div>
+                    </div>
+                    
+                    <form class="friendly-form" onsubmit="handleSubmit(event)">
+                        <div class="form-greeting">
+                            <p>Hi there! Let's get you signed up 👋</p>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">What should we call you?</label>
+                            <div class="name-inputs">
+                                <input type="text" placeholder="First name" required class="friendly-input">
+                                <input type="text" placeholder="Last name (optional)" class="friendly-input">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Where should we send the details? 📧</label>
+                            <input type="email" placeholder="your@email.com" required class="friendly-input">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Want text reminders? (optional)</label>
+                            <input type="tel" placeholder="Your phone number" class="friendly-input">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">How'd you find us? 😊</label>
+                            <select class="friendly-select">
+                                <option>Choose one...</option>
+                                <option>A friend told me</option>
+                                <option>Social media</option>
+                                <option>Google search</option>
+                                <option>Just lucky, I guess!</option>
+                            </select>
+                        </div>
+                        
+                        <div class="consent-box">
+                            <label class="friendly-checkbox">
+                                <input type="checkbox" required>
+                                <span>Yes! Send me walking tips & mental health resources (you can unsubscribe anytime)</span>
+                            </label>
+                        </div>
+                        
+                        <button type="submit" class="submit-button">
+                            <span>Count Me In! 🚀</span>
+                        </button>
+                        
+                        <p class="form-footer">See you Saturday! Bring comfy shoes and a smile 😊</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">Walk & Talk 🌿</div>
+                <ul class="footer-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#event">Event Details</a></li>
+                    <li><a href="#benefits">Benefits</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#register">Register</a></li>
+                </ul>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Walk & Talk. A Mental Health Awareness Week Initiative.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+        
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+        
+        // Parallax effect for hero (removed to fix overlap issue)
+        // Only fade hero content, don't move the hero section
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const heroContent = document.querySelector('.hero-content');
+            
+            if (heroContent && scrolled < window.innerHeight) {
+                heroContent.style.opacity = 1 - (scrolled / 800);
+            }
+        });
+        
+        // Form submission handler
+        function handleSubmit(event) {
+            event.preventDefault();
+            
+            const form = event.target;
+            const submitBtn = form.querySelector('.submit-btn');
+            const originalText = submitBtn.textContent;
+            
+            // Show loading state
+            submitBtn.textContent = 'Submitting...';
+            submitBtn.disabled = true;
+            
+            // Simulate form submission
+            setTimeout(() => {
+                // Reset form
+                form.reset();
+                
+                // Show success message
+                submitBtn.textContent = '✓ Registration Complete!';
+                submitBtn.style.background = 'var(--sage-green)';
+                
+                // Reset button after 3 seconds
+                setTimeout(() => {
+                    submitBtn.textContent = originalText;
+                    submitBtn.disabled = false;
+                    submitBtn.style.background = '';
+                }, 3000);
+                
+                // Show alert (in real app, show better notification)
+                alert('Thank you for registering! We\'ll send you event details soon.');
+            }, 1500);
+        }
+    </script>
+</body>
+</html>
