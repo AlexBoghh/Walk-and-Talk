@@ -3667,38 +3667,41 @@
     <!-- QR Code Generation Script -->
     <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
     <script>
-        // PDF Configuration
-        // For local testing: Uses relative path to Trifold.pdf
-        // For online deployment: Update with your hosted URL
-        
-        // CONFIGURATION
-        const PDF_URL = 'Trifold.pdf'; // Local file path
-        // For online deployment, replace with: 'https://yourdomain.com/Trifold.pdf'
+        // PDF Configuration - Auto-detects deployment environment
         
         // Generate QR Code when page loads
         document.addEventListener('DOMContentLoaded', function() {
-            // Check if URL is configured
-            if (PDF_URL) {
-                // Clear the placeholder
-                document.getElementById('qrcode').innerHTML = '';
-                
-                // Generate QR Code
-                new QRCode(document.getElementById("qrcode"), {
-                    text: PDF_URL,
-                    width: 180,
-                    height: 180,
-                    colorDark : "#2D5F3F", // Your forest green color
-                    colorLight : "#ffffff",
-                    correctLevel : QRCode.CorrectLevel.H
-                });
-                
-                // Update the download link
-                document.getElementById('pdf-link').href = PDF_URL;
-                document.getElementById('pdf-link').setAttribute('download', 'Trifold.pdf');
+            // Get the current domain
+            const currentHost = window.location.hostname;
+            let PDF_URL;
+            
+            // Check if we're on Vercel or local
+            if (currentHost.includes('vercel.app') || currentHost.includes('walk-and-talk')) {
+                // Production - use full URL
+                PDF_URL = 'https://walk-and-talk-nine.vercel.app/Trifold.pdf';
             } else {
-                console.log('QR Code waiting for PDF URL configuration');
-                // Keep the placeholder visible
+                // Local development - use relative path
+                PDF_URL = 'Trifold.pdf';
             }
+            
+            console.log('PDF URL:', PDF_URL);
+            
+            // Clear the placeholder
+            document.getElementById('qrcode').innerHTML = '';
+            
+            // Generate QR Code with full URL
+            new QRCode(document.getElementById("qrcode"), {
+                text: PDF_URL,
+                width: 180,
+                height: 180,
+                colorDark : "#2D5F3F", // Your forest green color
+                colorLight : "#ffffff",
+                correctLevel : QRCode.CorrectLevel.H
+            });
+            
+            // Update the download link (uses relative path which works for direct clicks)
+            document.getElementById('pdf-link').href = 'Trifold.pdf';
+            document.getElementById('pdf-link').setAttribute('download', 'Trifold.pdf');
         });
         
         // Add hover effect to download button
